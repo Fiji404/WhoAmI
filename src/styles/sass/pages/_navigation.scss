@@ -1,0 +1,27 @@
+@use '../utilities/colors';
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-inline: 1.5rem;
+    justify-content: space-between;
+    &__my-nickname {
+        color: colors.$white;
+        font-size: 1.6rem;
+        &_indicator {
+            color: #f00;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        gap: .6rem;
+        list-style: none;
+        &__link {
+            text-decoration: none;
+            color: colors.$white;
+            font-weight: 500;
+        }
+    }
+}
