@@ -1,16 +1,55 @@
-<nav class="nav">
-    <header>
-        <h1 class="nav__my-nickname">
-            Fiji<span class="nav__my-nickname_indicator">404</span>
-        </h1>
-		<img class="nav__sunglasses" src="/assets/sunglasses.svg" alt="Sunglasses emoji from GH profile">
-    </header>
-    <ul class="nav-list">
+<nav class="nav flex gap-4 items-center px-10 py-6 justify-between">
+    <a
+        href="/"
+        class="flex items-center gap-1 bg-neutral-800 px-2 py-2 rounded-md border-2 border-neutral-700 uppercase text-3xl font-bold text-white hover:border-neutral-500 transition-colors"
+    >
+        Fiji<span class="text-red-500">404</span>
+        <img
+            class="w-9"
+            src="/assets/sunglasses.png"
+            alt="avatar icon from GH profile"
+        />
+    </a>
+    <ul class="flex gap-5">
         <li>
-            <a class="nav-list__link" href="/projects/">My portfolio</a>
+            <a class="list-item" href="/about/">About</a>
         </li>
         <li>
-            <a class="nav-list__link" href="/projects/">About me</a>
+            <a class="list-item" href="/portfolio/">Portfolio</a>
+        </li>
+        <li>
+            <a class="list-item" href="/contact/">Contact</a>
         </li>
     </ul>
 </nav>
+
+<script>
+    class NavBar {
+        private navElement = document.querySelector('ul')!;
+        private navListItemsElements = this.navElement.querySelectorAll('li')!;
+        constructor() {
+            this.setMouseOverEvent();
+            this.setMouseOutEvent();
+        }
+
+        setMouseOverEvent() {
+            this.navElement.addEventListener('mouseover', e => {
+                const validTargetElement = (e.target as Element).closest('li');
+                if (!validTargetElement) return;
+                this.navListItemsElements.forEach((listItem: Element) =>
+                    listItem.classList.add('opacity-40')
+                );
+                validTargetElement.classList.remove('opacity-40');
+            });
+        }
+
+        setMouseOutEvent() {
+            this.navElement.addEventListener('mouseout', () =>
+                this.navListItemsElements.forEach((listItem: Element) =>
+                    listItem.classList.remove('opacity-40')
+                )
+            );
+        }
+    }
+    const navbar = new NavBar();
+</script>

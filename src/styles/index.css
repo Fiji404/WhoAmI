@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    @apply bg-neutral-900 font-serif;
+}
+.list-item {
+    @apply relative text-white decoration-transparent text-xl font-medium before:absolute before:bottom-0 before:translate-y-5 before:left-1/2 before:-translate-x-1/2 before:w-11/12 before:h-2 before:rounded-md before:bg-neutral-700 before:pointer-events-none hover:before:translate-y-3 hover:before:bg-yellow-400 hover:before:shadow-lg hover:before:shadow-yellow-400 hover:before:opacity-100 before:opacity-50 before:transition-all;
+}
