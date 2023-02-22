@@ -1,2 +1,5 @@
-export { Navbar } from './Navbar/Navbar'
+export { Nav } from './Navbar/Nav'
 export { WelcomeHeader } from './WelcomeHeader/WelcomeHeader'
+export { NavItem } from './Navbar/NavItem'
+export { NavLogo } from './Navbar/NavLogo'
+export { ParticlesBg } from './Particles/Particles'

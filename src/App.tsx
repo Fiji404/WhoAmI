@@ -1,8 +1,10 @@
-import { Navbar, WelcomeHeader } from "./components";
+import { Nav, WelcomeHeader } from './components';
 
-export function App() {
-    return <div className="App">
-        <Navbar />
-        <WelcomeHeader />
-    </div>;
-}
+export const App = () => {
+    return (
+        <>
+            <Nav />
+            <WelcomeHeader />
+        </>
+    );
+};
