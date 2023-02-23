@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 sans: 'Open Sans, sans-serif',
                 heading: 'Merriweather, sans-serif',
+                consolas: 'Inconsolata, monospace'
             },
             colors: {
                 primary: '#111',

@@ -13,11 +13,25 @@ export const Nav = () => {
         hidden: { opacity: 0, translateY: '-20px' },
     };
     return (
-        <motion.nav custom={0.5} initial="hidden" animate="visible" variants={variants} className="bg-[#151515] py-3 px-5 border-b border-b-[#2b2b2b] flex justify-between items-center">
+        <motion.nav
+            custom={0.5}
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            className="bg-[rgba(21,21,21,0.79)] py-3 px-5 border-b border-b-[#2b2b2b] flex justify-between items-center fixed top-0 w-full z-10 backdrop-blur-sm"
+        >
             <NavLogo />
             <ul className="flex gap-3 text-[#fff] font-semibold">
                 {PAGE_LINKS.map(({ href, text, target, id }, i) => (
-                    <NavItem initial="hidden" animate="visible" variants={variants} custom={i}  key={id} className="nav-item" {...{ href, text, target }} />
+                    <NavItem
+                        initial="hidden"
+                        animate="visible"
+                        variants={variants}
+                        custom={i}
+                        key={id}
+                        className="nav-item"
+                        {...{ href, text, target }}
+                    />
                 ))}
             </ul>
         </motion.nav>
