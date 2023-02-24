@@ -5,3 +5,5 @@ export { NavLogo } from './Nav/NavLogo';
 export { ParticlesBg } from './Particles/Particles';
 export { AboutMe } from './AboutMe/AboutMe';
 export { AboutMeDiagram } from './AboutMe/AboutMeDiagram';
+export { FeaturedProjects } from './FeaturedProjects/FeaturedProjects';
+export { ContactMe } from './ContactMe/ContactMe'

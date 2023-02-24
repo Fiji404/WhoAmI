@@ -1,5 +1,5 @@
 import { NavItem, NavLogo } from '..';
-import { Variants, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const PAGE_LINKS = [
     { id: crypto.randomUUID(), href: '#about', text: 'About me' },
@@ -8,30 +8,17 @@ const PAGE_LINKS = [
 ];
 
 export const Nav = () => {
-    const variants: Variants = {
-        visible: (delay: number) => ({ opacity: 1, translateY: 0, transition: { delay: delay * 0.6 } }),
-        hidden: { opacity: 0, translateY: '-20px' },
-    };
     return (
         <motion.nav
             custom={0.5}
-            initial="hidden"
-            animate="visible"
-            variants={variants}
+            initial={{ opacity: 0, translateY: '-200%' }}
+            animate={{ opacity: 1, translateY: 0 }}
             className="bg-[rgba(21,21,21,0.79)] py-3 px-5 border-b border-b-[#2b2b2b] flex justify-between items-center fixed top-0 w-full z-10 backdrop-blur-sm"
         >
             <NavLogo />
             <ul className="flex gap-3 text-[#fff] font-semibold">
                 {PAGE_LINKS.map(({ href, text, target, id }, i) => (
-                    <NavItem
-                        initial="hidden"
-                        animate="visible"
-                        variants={variants}
-                        custom={i}
-                        key={id}
-                        className="nav-item"
-                        {...{ href, text, target }}
-                    />
+                    <NavItem key={id} {...{ href, text, target }} />
                 ))}
             </ul>
         </motion.nav>

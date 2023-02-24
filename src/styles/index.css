@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         background-color: #111;
         font-family: 'Open Sans', sans-serif;
@@ -22,34 +25,40 @@
         background-color: #2b2b2b;
     }
     .nav-item {
-        @apply py-1 px-2 border border-[#2b2b2b] rounded-[3px] bg-[#1a1a1a] hover:bg-[#1f1f1f] font-medium cursor-pointer text-white transition-colors;
+        @apply py-1 px-2 border border-[#2b2b2b] rounded-[3px] bg-[#1a1a1a] hover:bg-[#1f1f1f] font-medium cursor-pointer text-[#a0a0a0] hover:text-white transition-colors;
     }
     .page-header-title {
         @apply font-heading text-white text-center text-5xl;
     }
     .card {
-        @apply bg-secondary border border-[#1d1d1d] p-4 rounded-[3px] cursor-default min-w-[250px] grow max-w-2xl;
+        @apply bg-secondary border border-[#202020] p-4 rounded-[3px] cursor-default min-w-[250px] grow max-w-2xl;
     }
     .item {
         @apply bg-[#1a1a1a] py-1 px-3 text-xl rounded-[3px] border border-[#272727] flex items-center gap-2;
     }
     .diagram-row {
-        @apply flex gap-6 border border-[#1f1f1f] p-3 rounded-md;
+        @apply flex gap-6 border border-[#1d1d1d] p-3 rounded-md;
         grid-template-columns: minmax(1fr, 200px) 1fr;
     }
     .diagram-label {
-        @apply flex items-center text-white font-consolas text-center pr-2 relative w-full max-w-[100px];
+        @apply flex items-center text-white font-consolas text-center pr-2 pl-1 relative w-full max-w-[100px];
     }
     .diagram-desc {
-        @apply text-[#b4b4b4]  font-consolas;
+        @apply flex items-center text-[#b4b4b4]  font-consolas;
     }
     .skill-item {
-        @apply flex items-center gap-2 py-1 px-3;
+        @apply flex items-center gap-2 py-[10px] px-4 border-[#272727] bg-[#141414] hover:bg-[#1a1a1a];
     }
     .diagram-label::after {
         @apply content-[''] absolute -right-2 top-0 w-[1px] h-full bg-[#252525] rounded-md;
     }
-    /* .line-separator {
-        @apply w-4 h-full bg-[#fff] relative
-    } */
+    .container {
+        @apply w-[95%] max-w-[1500px] mx-auto;
+    }
+    .input {
+        @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] text-xl min-h-[50px] focus:outline-none focus:border-[#363636] transition-colors;
+    }
+    .btn {
+        @apply flex gap-2 items-center bg-[rgba(21,21,21,0.52)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] hover:bg-[#161616] text-xl transition-colors;
+    }
 }

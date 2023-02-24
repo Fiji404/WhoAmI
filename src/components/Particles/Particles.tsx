@@ -10,7 +10,6 @@ interface Props {
 
 export const ParticlesBg = ({ particlesID }: Props) => {
     const particlesInit = useCallback(async (engine: Engine) => await loadFull(engine), []);
-
     return (
         <Particles
             className="fixed inset-0 -z-10"
