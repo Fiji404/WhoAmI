@@ -1,4 +1,5 @@
 import { Variants, motion } from 'framer-motion';
+import { Fragment } from 'react'
 
 interface Props {
     text: string;
@@ -28,7 +29,7 @@ const item: Variants = {
 
 export const SectionHeading = ({ text, styles }: Props) => {
     const animatedLetters = text?.split(' ').map((word, i) => (
-        <>
+        <Fragment key={i}>
             <span key={i} style={{ whiteSpace: 'nowrap' }}>
                 {word.split('').map((letter, i) => (
                     <span key={i}>
@@ -39,7 +40,7 @@ export const SectionHeading = ({ text, styles }: Props) => {
                 ))}
             </span>
             <span>{'\u00A0'}</span>
-        </>
+        </Fragment>
     ));
     return (
         <motion.h2

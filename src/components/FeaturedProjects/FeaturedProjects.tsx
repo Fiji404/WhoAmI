@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '../UI/SectionHeading';
 import { FeaturedProject } from './FeaturedProject';
 
@@ -17,10 +18,11 @@ const FEATURED_PROJECTS = [
 ];
 
 export const FeaturedProjects = () => {
+    const { t } = useTranslation()
     return (
         <section className="mt-20">
             <header>
-                <SectionHeading text='Featured Projects' />
+                <SectionHeading text={t("Featured Projects")} />
             </header>
             <div className='flex justify-center gap-4 w-[95%] max-w-[1500px] mx-auto'>
                 {FEATURED_PROJECTS.map((prjDetails) => <FeaturedProject key={prjDetails.id} {...prjDetails}/>)}

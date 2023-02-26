@@ -6,13 +6,17 @@ module.exports = {
             fontFamily: {
                 sans: 'Open Sans, sans-serif',
                 heading: 'Merriweather, sans-serif',
-                consolas: 'Inconsolata, monospace'
+                consolas: 'Inconsolata, monospace',
             },
             colors: {
                 primary: '#111',
                 secondary: '#151515',
-                accent: '#151515'
+                accent: '#151515',
             },
+        },
+        screens: {
+            sm: { max: '530px' },
+            md: { max: '1110px' },
         },
     },
     plugins: [],

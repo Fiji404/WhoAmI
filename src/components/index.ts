@@ -7,3 +7,4 @@ export { AboutMe } from './AboutMe/AboutMe';
 export { AboutMeDiagram } from './AboutMe/AboutMeDiagram';
 export { FeaturedProjects } from './FeaturedProjects/FeaturedProjects';
 export { ContactMe } from './ContactMe/ContactMe'
+export { Footer } from './Footer/Footer'

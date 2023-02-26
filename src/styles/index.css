@@ -25,7 +25,7 @@
         background-color: #2b2b2b;
     }
     .nav-item {
-        @apply py-1 px-2 border border-[#2b2b2b] rounded-[3px] bg-[#1a1a1a] hover:bg-[#1f1f1f] font-medium cursor-pointer text-[#a0a0a0] hover:text-white transition-colors;
+        @apply py-1 px-2 border border-[#2b2b2b] rounded-[3px] bg-[#1a1a1a] hover:bg-[#1f1f1f] font-medium cursor-pointer text-[#a0a0a0] hover:text-white whitespace-nowrap transition-colors;
     }
     .page-header-title {
         @apply font-heading text-white text-center text-5xl;
@@ -41,7 +41,7 @@
         grid-template-columns: minmax(1fr, 200px) 1fr;
     }
     .diagram-label {
-        @apply flex items-center text-white font-consolas text-center pr-2 pl-1 relative w-full max-w-[100px];
+        @apply flex items-center justify-center text-white font-consolas text-center pr-2 pl-1 relative w-full max-w-[100px];
     }
     .diagram-desc {
         @apply flex items-center text-[#b4b4b4]  font-consolas;
@@ -60,5 +60,17 @@
     }
     .btn {
         @apply flex gap-2 items-center bg-[rgba(21,21,21,0.52)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] hover:bg-[#161616] text-xl transition-colors;
+    }
+    .lang-opt {
+        @apply py-1 px-2 bg-[#1d1d1d] hover:bg-[#242424] transition-colors;
+    }
+    .heading {
+        width: min(95%, 600px);
+        font-size: clamp(3rem, 3vw + 2rem, 5.5rem);
+        @apply font-heading text-white leading-tight md:w-full md:text-center;
+    }
+
+    .subheading {
+
     }
 }

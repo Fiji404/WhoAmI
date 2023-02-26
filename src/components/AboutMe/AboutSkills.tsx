@@ -3,7 +3,7 @@ import { IoLogoSass } from 'react-icons/io';
 
 export const AboutSkills = () => {
     return (
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-wrap gap-2 items-center">
             <a href="https://beta.reactjs.org//" target="_blank" className="nav-item skill-item">
                 React <SiReact color="#61DAFB" />
             </a>

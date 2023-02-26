@@ -2,10 +2,13 @@ import { Variants, motion, useMotionValue, useMotionValueEvent, useScroll } from
 import { SlArrowDown } from 'react-icons/sl';
 import { useState } from 'react';
 import { SectionHeading } from '../UI/SectionHeading';
+import { useTranslation } from 'react-i18next';
 
 type VariantsArgs = number;
 
 export const WelcomeHeader = () => {
+    const { t } = useTranslation();
+
     const { scrollY } = useScroll();
     const [isUserScrolled, setIsUserScrolled] = useState(false);
     useMotionValueEvent(scrollY, 'change', offsetY => {
@@ -20,13 +23,13 @@ export const WelcomeHeader = () => {
         <>
             <section className="max-w-[85%] h-screen mx-auto">
                 <div className="flex flex-col items-center justify-center h-full  py-7">
-                    <div className="flex justify-between w-full items-center h-full">
+                    <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
                         <SectionHeading
-                            styles="font-heading text-white max-w-xl leading-tight text-8xl"
-                            text="I'm a thriving frontend developer"
+                            styles="heading"
+                            text={t("I'm a thriving frontend developer")}
                         />
                         <motion.img
-                            initial={{ opacity: 0, scale: 0.7, filter: '' }}
+                            initial={{ opacity: 0, scale: 0.7, filter: 'drop-shadow(0 0 0 transparent)' }}
                             animate={{ opacity: 1, scale: 1, transition: { delay: 1 } }}
                             whileHover={{
                                 translateY: '-5%',

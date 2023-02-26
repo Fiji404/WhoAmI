@@ -7,7 +7,7 @@ interface Props {
 export const NavItem = ({ href, text, target }: Props) => {
     return (
         <li>
-            <a className="nav-item" {...{ href, target }}>
+            <a className="nav-item sm:hidden" {...{ href, target }}>
                 {text}
             </a>
         </li>

@@ -3,7 +3,7 @@ import { FaRedditAlien, FaTelegramPlane } from 'react-icons/fa';
 
 export const ContactMeSocials = () => {
     return (
-        <ul className="mt-5 flex gap-3 justify-center">
+        <ul className="mt-5 flex flex-col gap-3 justify-center">
             <button className="btn">
                 Discord <SiDiscord color="#5865F2" />
             </button>

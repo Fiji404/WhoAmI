@@ -1,0 +1,40 @@
+{
+    "en": {
+        "translation": {
+            "About me": "About me",
+            "Contact": "Contact",
+            "I'm a thriving frontend developer": "I'm a thriving frontend developer",
+            "Facts about me": "Facts about me",
+            "Username": "Username",
+            "Fiji404 or Radek": "Fiji404 or Radek",
+            "Description": "Description",
+            "My career": "My career",
+            "Skills": "Username",
+            "Featured Projects": "Featured projects",
+            "Contact me": "Contact me",
+            "Full name": "Full name",
+            "Hello 👋, I'm writing you because...": "Hello 👋, I'm writing you because...",
+            "Send": "Send",
+            "OR": "OR"
+        }
+    },
+    "pl": {
+        "translation": {
+            "About me": "O mnie",
+            "Contact": "Kontakt",
+            "I'm a thriving frontend developer": "Jestem prosperującym frontend developerem",
+            "Facts about me": "Szybkie fakty o mnie",
+            "Username": "Nazwa użytkownika",
+            "Fiji404 or Radek": "Fiji404 lub Radek",
+            "Description": "Opis",
+            "My career": "Moja kariera",
+            "Skills": "Umiejętności",
+            "Featured Projects": "Wyróżnione projekty",
+            "Contact me": "Skontaktuj się ze mną",
+            "Full name": "Imię i nazwisko",
+            "Hello 👋, I'm writing you because...": "Cześć 👋, Piszę do ciebie ponieważ...",
+            "Send": "Wyślij",
+            "OR": "Lub"
+        }
+    }
+}
