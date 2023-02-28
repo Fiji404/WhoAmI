@@ -9,13 +9,12 @@
             "Fiji404 or Radek": "Fiji404 or Radek",
             "Description": "Description",
             "My career": "My career",
-            "Skills": "Username",
+            "Skills": "Skills",
             "Featured Projects": "Featured projects",
             "Contact me": "Contact me",
             "Full name": "Full name",
             "Hello 👋, I'm writing you because...": "Hello 👋, I'm writing you because...",
-            "Send": "Send",
-            "OR": "OR"
+            "Send": "Send"
         }
     },
     "pl": {
@@ -23,7 +22,7 @@
             "About me": "O mnie",
             "Contact": "Kontakt",
             "I'm a thriving frontend developer": "Jestem prosperującym frontend developerem",
-            "Facts about me": "Szybkie fakty o mnie",
+            "Facts about me": "Fakty o mnie",
             "Username": "Nazwa użytkownika",
             "Fiji404 or Radek": "Fiji404 lub Radek",
             "Description": "Opis",
@@ -33,8 +32,7 @@
             "Contact me": "Skontaktuj się ze mną",
             "Full name": "Imię i nazwisko",
             "Hello 👋, I'm writing you because...": "Cześć 👋, Piszę do ciebie ponieważ...",
-            "Send": "Wyślij",
-            "OR": "Lub"
+            "Send": "Wyślij"
         }
     }
 }

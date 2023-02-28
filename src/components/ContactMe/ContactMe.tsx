@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '../UI/SectionHeading';
 import { ContactMeForm } from './ContactMeForm';
-import { ContactMeSocials } from './ContactMeSocials';
 
 export const ContactMe = () => {
     const { t } = useTranslation()
@@ -12,8 +11,6 @@ export const ContactMe = () => {
             </header>
             <div className="flex justify-center gap-6 items-center">
                 <ContactMeForm />
-                <p className="mt-4 text-center text-[#757575]">{t("OR")}</p>
-                <ContactMeSocials />
             </div>
         </section>
     );

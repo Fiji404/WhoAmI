@@ -47,7 +47,7 @@
         @apply flex items-center text-[#b4b4b4]  font-consolas;
     }
     .skill-item {
-        @apply flex items-center gap-2 py-[10px] px-4 border-[#272727] bg-[#141414] hover:bg-[#1a1a1a];
+        @apply flex items-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(21,21,21,0.88)] text-[#a0a0a0] border rounded-[3px] hover:bg-[#1a1a1a] transition-colors;
     }
     .diagram-label::after {
         @apply content-[''] absolute -right-2 top-0 w-[1px] h-full bg-[#252525] rounded-md;
@@ -59,7 +59,8 @@
         @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] text-xl min-h-[50px] focus:outline-none focus:border-[#363636] transition-colors;
     }
     .btn {
-        @apply flex gap-2 items-center bg-[rgba(21,21,21,0.52)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] hover:bg-[#161616] text-xl transition-colors;
+        width: min(95%, 140px);
+        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-1 px-2 rounded-md border border-[#1b1b1b] text-[#dfdfdf] hover:bg-[#161616] hover:border-[#202020] text-xl transition-colors;
     }
     .lang-opt {
         @apply py-1 px-2 bg-[#1d1d1d] hover:bg-[#242424] transition-colors;
@@ -68,9 +69,5 @@
         width: min(95%, 600px);
         font-size: clamp(3rem, 3vw + 2rem, 5.5rem);
         @apply font-heading text-white leading-tight md:w-full md:text-center;
-    }
-
-    .subheading {
-
     }
 }
