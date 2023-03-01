@@ -1,10 +1,10 @@
-export { Nav } from './Nav/Nav';
+export { Nav } from './Nav/NavMenu/Nav';
 export { WelcomeHeader } from './WelcomeHeader/WelcomeHeader';
-export { NavItem } from './Nav/NavItem';
-export { NavLogo } from './Nav/NavLogo';
-export { ParticlesBg } from './Particles/Particles';
+export { NavItem } from './Nav/NavMenu/NavItem';
+export { NavLogo } from './Nav/NavMenu/NavLogo';
+export { ParticlesBg } from './UI/ParticlesBg';
 export { AboutMe } from './AboutMe/AboutMe';
-export { AboutMeDiagram } from './AboutMe/AboutMeDiagram';
+export { AboutMeDiagram } from './AboutMe/AboutMeDiagram/AboutMeDiagram';
 export { FeaturedProjects } from './FeaturedProjects/FeaturedProjects';
 export { ContactMe } from './ContactMe/ContactMe'
 export { Footer } from './Footer/Footer'

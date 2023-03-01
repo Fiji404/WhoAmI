@@ -4,16 +4,12 @@ import type { Engine } from 'tsparticles-engine';
 import { loadFull } from 'tsparticles';
 import particlesOptions from '../../config/particles-options.json';
 
-interface Props {
-    particlesID: string;
-}
-
-export const ParticlesBg = ({ particlesID }: Props) => {
+export const ParticlesBg = () => {
     const particlesInit = useCallback(async (engine: Engine) => await loadFull(engine), []);
     return (
         <Particles
             className="fixed inset-0 -z-10"
-            id={particlesID}
+            id="particles"
             init={particlesInit}
             options={particlesOptions}
         />

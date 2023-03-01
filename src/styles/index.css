@@ -37,7 +37,7 @@
         @apply bg-[#1a1a1a] py-1 px-3 text-xl rounded-[3px] border border-[#272727] flex items-center gap-2;
     }
     .diagram-row {
-        @apply flex gap-6 border border-[#1d1d1d] p-3 rounded-md;
+        @apply flex gap-6 border border-[#1d1d1d] px-3 py-2 rounded-md;
         grid-template-columns: minmax(1fr, 200px) 1fr;
     }
     .diagram-label {
@@ -47,7 +47,7 @@
         @apply flex items-center text-[#b4b4b4]  font-consolas;
     }
     .skill-item {
-        @apply flex items-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(21,21,21,0.88)] text-[#a0a0a0] border rounded-[3px] hover:bg-[#1a1a1a] transition-colors;
+        @apply flex items-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-[3px] hover:bg-[rgba(22,22,22,0.92)]  hover:text-white transition-colors;
     }
     .diagram-label::after {
         @apply content-[''] absolute -right-2 top-0 w-[1px] h-full bg-[#252525] rounded-md;
@@ -60,7 +60,7 @@
     }
     .btn {
         width: min(95%, 140px);
-        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-1 px-2 rounded-md border border-[#1b1b1b] text-[#dfdfdf] hover:bg-[#161616] hover:border-[#202020] text-xl transition-colors;
+        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-1 px-2 rounded-md border border-[#1f1f1f] text-[#dfdfdf] hover:bg-[#161616] hover:border-[#202020] text-xl transition-colors;
     }
     .lang-opt {
         @apply py-1 px-2 bg-[#1d1d1d] hover:bg-[#242424] transition-colors;
