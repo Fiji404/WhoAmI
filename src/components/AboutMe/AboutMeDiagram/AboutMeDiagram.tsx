@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
-import { AboutSkills } from '../AboutSkills';
-import { useTranslation } from 'react-i18next';
+import { KnownLanguages } from '../KnownLanguages/KnownLanguages';
 import { AboutMeDiagramItem } from './AboutMeDiagramItem';
 
 const ABOUT_ME_INFO = [
@@ -13,7 +11,7 @@ const ABOUT_ME_INFO = [
         title: 'My career',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ab esse, totam consequaturanimi ullam explicabo velit ipsam, quae assumenda veniam in, eius illum tenetur?',
     },
-    { title: 'Skills', desc: <AboutSkills /> },
+    { title: 'Skills', desc: <KnownLanguages /> },
 ];
 
 export const AboutMeDiagram = () => {

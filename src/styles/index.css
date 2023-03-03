@@ -25,7 +25,7 @@
         background-color: #2b2b2b;
     }
     .nav-item {
-        @apply py-1 px-2 border border-[#2b2b2b] rounded-[3px] bg-[#1a1a1a] hover:bg-[#1f1f1f] font-medium cursor-pointer text-[#a0a0a0] hover:text-white whitespace-nowrap transition-colors;
+        @apply py-1 px-2 border border-[#242424] rounded-[3px] bg-[#141414d3] hover:bg-[#1a1a1ade] font-medium cursor-pointer text-[#a0a0a0] hover:text-[#e9e8e8] whitespace-nowrap transition-colors;
     }
     .page-header-title {
         @apply font-heading text-white text-center text-5xl;
@@ -49,6 +49,18 @@
     .skill-item {
         @apply flex items-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-[3px] hover:bg-[rgba(22,22,22,0.92)]  hover:text-white transition-colors;
     }
+    .skill-item[data-lang="react"]:hover svg {
+        color: #61DAFB
+    }
+    .skill-item[data-lang="tailwindcss"]:hover svg {
+        color: #38BDF8
+    }
+    .skill-item[data-lang="sass"]:hover svg {
+        color: #C66394
+    }
+    .skill-item[data-lang="typescript"]:hover svg {
+        color: #3178C6
+    }
     .diagram-label::after {
         @apply content-[''] absolute -right-2 top-0 w-[1px] h-full bg-[#252525] rounded-md;
     }
@@ -59,8 +71,8 @@
         @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-[#222222] text-[#dfdfdf] text-xl min-h-[50px] focus:outline-none focus:border-[#363636] transition-colors;
     }
     .btn {
-        width: min(95%, 140px);
-        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-1 px-2 rounded-md border border-[#1f1f1f] text-[#dfdfdf] hover:bg-[#161616] hover:border-[#202020] text-xl transition-colors;
+        width: min(95%, 170px);
+        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-2 px-4 rounded-md border border-[#1f1f1f] text-[#dfdfdf] hover:bg-[#161616] hover:shadow-md hover:border-[#202020] text-xl transition-colors;
     }
     .lang-opt {
         @apply py-1 px-2 bg-[#1d1d1d] hover:bg-[#242424] transition-colors;

@@ -1,7 +1,7 @@
 import { NavItem, NavLogo } from '../..';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { NavLangList } from '../NavLangOpt/NavLangOpt';
+import { NavLangOpt } from '../NavLangOpt/NavLangOpt';
 import { NavMobileBtn } from '../NavMobile/NavMobileBtn';
 
 const PAGE_LINKS = [
@@ -23,7 +23,7 @@ export const Nav = () => {
                 {PAGE_LINKS.map(({ href, text, target, id }, i) => (
                     <NavItem key={id} text={t(text)} {...{ href, target }} />
                 ))}
-                <NavLangList />
+                <NavLangOpt />
                 <NavMobileBtn />
             </ul>
         </motion.nav>
