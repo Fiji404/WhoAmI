@@ -51,6 +51,10 @@
     .skill-item[data-lang='react']:hover svg {
         color: #61dafb;
     }
+    .skill-item[data-lang='astro']:hover svg,
+    .skill-item[data-lang='html']:hover svg {
+        color: #FF5D01;
+    }
     .skill-item[data-lang='tailwindcss']:hover svg {
         color: #38bdf8;
     }
@@ -79,7 +83,7 @@
         @apply font-heading text-white leading-tight md:w-full md:text-center;
     }
     .sub-heading {
-        font-size: clamp(2.5rem, 2vw + 1rem, 3rem);
+        font-size: clamp(2.6rem, 2vw + 1rem, 3rem);
         @apply font-heading text-center text-white;
     }
     .mobile-nav {

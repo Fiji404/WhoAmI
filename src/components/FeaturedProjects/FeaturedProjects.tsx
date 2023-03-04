@@ -1,32 +1,44 @@
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '../UI/SectionHeading';
-import { FeaturedProject } from './FeaturedProject';
+import { FeaturedProject } from './FeaturedProject/FeaturedProject';
+import { FaStrava } from 'react-icons/fa';
+import { SiTailwindcss, SiTypescript, SiHtml5 } from 'react-icons/si';
 
 const FEATURED_PROJECTS = [
     {
         id: 0,
         projectName: 'Quick Tips',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam accusamus repellat labore aliquid, architecto praesentium dicta suscipit explicabo amet distinctio.',
+            'This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.',
+        usedStack: [
+            { lang: 'HTML', langIcon: <SiHtml5 /> },
+            { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
+            { lang: 'TypeScript', langIcon: <SiTypescript /> },
+        ],
     },
     {
         id: 1,
         projectName: 'My Todos',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam accusamus repellat labore aliquid, architecto praesentium dicta suscipit explicabo amet distinctio.',
+            'My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.',
+        usedStack: [
+            { lang: 'Astro', langIcon: <FaStrava /> },
+            { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
+            { lang: 'TypeScript', langIcon: <SiTypescript /> },
+        ],
     },
 ];
 
 export const FeaturedProjects = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
     return (
         <section className="mt-20">
-            <header>
-                <SectionHeading text={t("Featured Projects")} />
-            </header>
-            <div className='flex justify-center gap-4 w-[95%] max-w-[1500px] mx-auto'>
-                {FEATURED_PROJECTS.map((prjDetails) => <FeaturedProject key={prjDetails.id} {...prjDetails}/>)}
-            </div>
+            <SectionHeading text={t('Featured Projects')} />
+            <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
+                {FEATURED_PROJECTS.map(prjDetails => (
+                    <FeaturedProject key={prjDetails.id} {...prjDetails} />
+                ))}
+            </ul>
         </section>
     );
 };
