@@ -5,7 +5,7 @@ const ABOUT_ME_INFO = [
     { title: 'Username', desc: 'Fiji404 or Radek :D' },
     {
         title: 'Description',
-        desc: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corporis accusantium tenetur? Nam aperiam ipsa commodi ea voluptate saepe laboriosam!',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corporis accusantium tenetur? Nam aperiam ipsa commodi ea voluptate saepe laboriosam!',
     },
     {
         title: 'My career',

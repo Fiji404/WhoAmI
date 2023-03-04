@@ -1,11 +1,13 @@
 import { BiMenuAltRight } from 'react-icons/bi';
 
-export const NavMobileBtn = () => {
+interface Props {
+    onNavOpen(): void;
+}
+
+export const NavMobileBtn = ({ onNavOpen }: Props) => {
     return (
-        <li className="hidden sm:block">
-            <button className="nav-item p-1">
-                <BiMenuAltRight fontSize="1.7rem" color="#fff" />
-            </button>
-        </li>
+        <button onClick={onNavOpen} className="nav-item p-1 hidden sm:block">
+            <BiMenuAltRight fontSize="1.5rem" color="#fff" />
+        </button>
     );
 };

@@ -37,32 +37,28 @@
         @apply bg-[#1a1a1a] py-1 px-3 text-xl rounded-[3px] border border-[#272727] flex items-center gap-2;
     }
     .diagram-row {
-        @apply flex gap-6 border border-[#1d1d1d] px-3 py-2 rounded-md;
-        grid-template-columns: minmax(1fr, 200px) 1fr;
+        @apply flex gap-6 border border-[#1d1d1d] px-3 py-2 rounded-md sm:flex-col;
     }
     .diagram-label {
-        @apply flex items-center justify-center text-white font-consolas text-center pr-2 pl-1 relative w-full max-w-[100px];
+        @apply flex items-center justify-center text-white font-consolas text-center pl-1 relative w-full max-w-[130px] border-r px-5 border-[#202020] sm:max-w-none sm:border-r-0 sm:border-b sm:pb-3;
     }
     .diagram-desc {
-        @apply flex items-center text-[#b4b4b4]  font-consolas;
+        @apply flex items-center text-[#b4b4b4] font-consolas sm:justify-center;
     }
     .skill-item {
-        @apply flex items-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-[3px] hover:bg-[rgba(22,22,22,0.92)]  hover:text-white transition-colors;
+        @apply flex items-center justify-center gap-2 py-[10px] px-4 border-[#1d1d1d] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-[3px] hover:bg-[rgba(22,22,22,0.92)]  hover:text-white grow transition-colors;
     }
-    .skill-item[data-lang="react"]:hover svg {
-        color: #61DAFB
+    .skill-item[data-lang='react']:hover svg {
+        color: #61dafb;
     }
-    .skill-item[data-lang="tailwindcss"]:hover svg {
-        color: #38BDF8
+    .skill-item[data-lang='tailwindcss']:hover svg {
+        color: #38bdf8;
     }
-    .skill-item[data-lang="sass"]:hover svg {
-        color: #C66394
+    .skill-item[data-lang='sass']:hover svg {
+        color: #c66394;
     }
-    .skill-item[data-lang="typescript"]:hover svg {
-        color: #3178C6
-    }
-    .diagram-label::after {
-        @apply content-[''] absolute -right-2 top-0 w-[1px] h-full bg-[#252525] rounded-md;
+    .skill-item[data-lang='typescript']:hover svg {
+        color: #3178c6;
     }
     .container {
         @apply w-[95%] max-w-[1500px] mx-auto;
@@ -81,5 +77,18 @@
         width: min(95%, 600px);
         font-size: clamp(3rem, 3vw + 2rem, 5.5rem);
         @apply font-heading text-white leading-tight md:w-full md:text-center;
+    }
+    .sub-heading {
+        font-size: clamp(2.5rem, 2vw + 1rem, 3rem);
+        @apply font-heading text-center text-white;
+    }
+    .mobile-nav {
+        @apply flex-col absolute right-0 -bottom-2 translate-y-full bg-[rgb(19,19,19)] p-3 items-center border border-[#272727] gap-3 origin-top transition-transform;
+    }
+    .mobile-nav li {
+        @apply w-full;
+    }
+    .mobile-nav li a {
+        @apply w-full inline-block text-center;
     }
 }

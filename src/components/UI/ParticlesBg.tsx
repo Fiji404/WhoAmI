@@ -1,17 +1,17 @@
 import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
-import type { Engine } from 'tsparticles-engine';
+import type { Engine, ISourceOptions } from 'tsparticles-engine';
 import { loadFull } from 'tsparticles';
-import particlesOptions from '../../config/particles-options.json';
+import particlesConfig from '../../config/particles-config.json';
 
 export const ParticlesBg = () => {
     const particlesInit = useCallback(async (engine: Engine) => await loadFull(engine), []);
     return (
         <Particles
-            className="fixed inset-0 -z-10"
+            className="fixed inset-0 z-0 "
             id="particles"
             init={particlesInit}
-            options={particlesOptions}
+            options={particlesConfig as ISourceOptions}
         />
     );
 };

@@ -48,7 +48,7 @@ export const SectionHeading = ({ text, styles }: Props) => {
             viewport={{ once: true }}
             whileInView="visible"
             variants={variants}
-            className={styles ? styles : 'font-heading text-5xl text-center text-white'}
+            className={styles ? styles : 'sub-heading'}
         >
             {animatedLetters}
         </motion.h2>

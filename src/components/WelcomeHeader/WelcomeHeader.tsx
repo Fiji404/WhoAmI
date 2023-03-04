@@ -38,6 +38,7 @@ export const WelcomeHeader = () => {
                             }}
                             src="/reddit-avatar.png"
                             alt="My reddit avatar"
+                            className='sm:max-w-[80%]'
                         />
                     </div>
                     <motion.div

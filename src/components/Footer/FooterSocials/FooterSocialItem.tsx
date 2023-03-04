@@ -1,13 +1,13 @@
 interface Props {
     platform: string;
     platformIcon: JSX.Element;
-    inviteURL: string;
+    URL: string;
 }
 
-export const FooterSocialItem = ({ platform, platformIcon, inviteURL }: Props) => {
+export const FooterSocialItem = ({ platform, platformIcon, URL }: Props) => {
     return (
         <li>
-            <a className="btn" href={inviteURL}>
+            <a target="_blank" className="btn" href={URL}>
                 {platform} {platformIcon}
             </a>
         </li>

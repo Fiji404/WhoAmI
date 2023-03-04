@@ -1,21 +1,23 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { NavLangList } from './NavLangList';
-import { LangContext } from '../../../contexts/Lang/langContext';
 import { IoLanguage } from 'react-icons/io5';
 
-export const NavLangOpt = () => {
-    const { updateLang } = useContext(LangContext);
-    const [isLanguageListOpen, setIsLanguageListOpen] = useState(false);
+interface Props {
+    onLangListOpen(): void;
+    isLangListOpen: boolean
+}
+
+export const NavLangBtn = ({ onLangListOpen, isLangListOpen }: Props) => {
     return (
-        <li className="relative">
+        <div className="relative">
             <button
-                onClick={() => setIsLanguageListOpen(isOpen => !isOpen)}
+                onClick={onLangListOpen}
                 aria-label="change language preference"
-                className="nav-item p-[5px] aspect-square sm:hidden"
+                className="nav-item p-[5px] aspect-square relative"
             >
-                <IoLanguage fontSize="1.1rem" />
+                <IoLanguage fontSize="1.3rem" />
             </button>
-            <NavLangList isListOpen={isLanguageListOpen} />
-        </li>
+            <NavLangList isListOpen={isLangListOpen} />
+        </div>
     );
 };

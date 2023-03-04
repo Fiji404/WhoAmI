@@ -11,7 +11,7 @@ const KNOWN_LANGUAGES = [
 
 export const KnownLanguages = () => {
     return (
-        <ul className="flex flex-wrap gap-3 items-center">
+        <ul className="flex flex-wrap gap-3 items-center w-full">
             {KNOWN_LANGUAGES.map((props, i) => (
                 <KnownLanguage key={i} {...props} />
             ))}

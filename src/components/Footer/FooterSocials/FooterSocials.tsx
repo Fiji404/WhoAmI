@@ -6,25 +6,25 @@ const SOCIALS_PLATFORMS = [
     {
         platform: 'Discord',
         platformIcon: <SiDiscord fontSize="1.6rem" color="#5865F2" />,
-        inviteURL: 'https://discord.gg/cZcKm7DdzD',
+        URL: 'https://discord.gg/cZcKm7DdzD',
     },
     {
         platform: 'Reddit',
         platformIcon: <FaRedditAlien fontSize="1.6rem" color="#FF5414" />,
-        inviteURL: 'https://www.reddit.com/user/Fiji990',
+        URL: 'https://www.reddit.com/user/Fiji990',
     },
     {
         platform: 'Github',
         platformIcon: <SiGithub fontSize="1.6rem" color="#fff" />,
-        inviteURL: '',
+        URL: 'https://github.com/Fiji404',
     },
 ];
 
 export const FooterSocials = () => {
     return (
         <ul className="flex flex-wrap gap-3 justify-center">
-            {SOCIALS_PLATFORMS.map(props => (
-                <FooterSocialItem {...props} />
+            {SOCIALS_PLATFORMS.map((props, i) => (
+                <FooterSocialItem key={i} {...props} />
             ))}
         </ul>
     );
