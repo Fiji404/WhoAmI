@@ -1,5 +1,5 @@
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ProjectDetailsModal } from '../ProjectDetailsModal/ProjectDetailsModal';
 import { createPortal } from 'react-dom';
 import { ProjectUsedStack } from './ProjectUsedStack';

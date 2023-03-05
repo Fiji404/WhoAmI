@@ -10,4 +10,4 @@ This is a portfolio website which describe my person.
 
 ## Demo
 
-Portfolio website you can check there [Fiji404](https://mytodos.ink)
+Portfolio website you can check there [Fiji404](https://fiji404.pro)

@@ -33,13 +33,13 @@ export const FeaturedProjects = () => {
     return (
         <section className="mt-20">
             <SectionHeading text={t('Featured Projects')} />
-            <ProjectDetailsProvider>
-                <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
-                    {FEATURED_PROJECTS.map((prjDetails, i) => (
+            <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
+                {FEATURED_PROJECTS.map((prjDetails, i) => (
+                    <ProjectDetailsProvider>
                         <FeaturedProject key={i} {...prjDetails} />
-                    ))}
-                </ul>
-            </ProjectDetailsProvider>
+                    </ProjectDetailsProvider>
+                ))}
+            </ul>
         </section>
     );
 };
