@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '../UI/SectionHeading';
-import { ContactMeForm } from './ContactMeForm';
+import { ContactMeForm } from './ContactMeForm/ContactMeForm';
 
 export const ContactMe = () => {
     const { t } = useTranslation()

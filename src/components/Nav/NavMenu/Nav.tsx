@@ -33,7 +33,7 @@ export const Nav = () => {
         <motion.nav
             initial={{ opacity: 0, translateY: '-200%' }}
             animate={{ opacity: 1, translateY: 0 }}
-            className="bg-[rgba(19,19,19,0.79)] py-3 px-5 border-b border-b-[#222222] flex justify-between items-center sticky top-0 w-full z-10 backdrop-blur-sm "
+            className="bg-[rgba(19,19,19,0.79)] py-3 px-5 border-b border-b-accent flex justify-between items-center sticky top-0 w-full z-10 backdrop-blur-sm "
         >
             <NavLogo />
             <div className="flex items-center gap-2 relative">

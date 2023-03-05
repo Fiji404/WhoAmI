@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { NavLangListItem } from './NavLangListItem';
-import { LangContext } from '../../../contexts/Lang/langContext';
+import { LangContext } from '../../../contexts/LangContext/langContext';
 import { useContext } from 'react';
 
 interface Props {

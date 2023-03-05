@@ -1,5 +1,5 @@
 import { Nav, WelcomeHeader, AboutMe, FeaturedProjects, ParticlesBg, ContactMe, Footer } from './components';
-import { LangProvider } from './contexts/Lang/LangProvider';
+import { LangProvider } from './contexts/LangContext/LangProvider';
 
 export const App = () => {
     return (

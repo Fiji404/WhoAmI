@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { LangContext } from '../../../contexts/Lang/langContext';
+import { LangContext } from '../../../contexts/LangContext/langContext';
 
 interface Props {
     langOpt: string;
