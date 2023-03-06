@@ -1,7 +1,7 @@
-import { Variants, motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion';
+import { Variants, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { SlArrowDown } from 'react-icons/sl';
 import { useState } from 'react';
-import { SectionHeading } from '../UI/SectionHeading';
+import { SectionHeading } from '@components/UI/SectionHeading';
 import { useTranslation } from 'react-i18next';
 
 type VariantsArgs = number;

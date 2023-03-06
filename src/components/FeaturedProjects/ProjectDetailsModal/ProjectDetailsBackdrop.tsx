@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ProjectDetailsContext } from '../../../contexts/ProjectDetailsContext/ProjectDetailsContext';
+import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 
 export const ProjectDetailsBackdrop = () => {
     const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext);

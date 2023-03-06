@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLangList } from './NavLangList';
 import { IoLanguage } from 'react-icons/io5';
 

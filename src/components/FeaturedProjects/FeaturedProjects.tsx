@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { SectionHeading } from '../UI/SectionHeading';
+import { SectionHeading } from '@components/UI/SectionHeading';
 import { FeaturedProject } from './FeaturedProject/FeaturedProject';
 import { FaStrava } from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiHtml5 } from 'react-icons/si';
-import { ProjectDetailsProvider } from '../../contexts/ProjectDetailsContext/ProjectDetailsProvider';
+import { ProjectDetailsProvider } from '@/contexts/ProjectDetailsContext/ProjectDetailsProvider';
 
 const FEATURED_PROJECTS = [
     {

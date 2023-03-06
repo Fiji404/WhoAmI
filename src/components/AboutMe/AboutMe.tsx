@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { AboutMeDiagram } from '..';
-import { SectionHeading } from '../UI/SectionHeading';
+import { AboutMeDiagram } from '@components/index';
+import { SectionHeading } from '@components/UI/SectionHeading';
 
 export const AboutMe = () => {
     const { t } = useTranslation();

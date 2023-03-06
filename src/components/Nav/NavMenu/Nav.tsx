@@ -1,4 +1,4 @@
-import { NavItem, NavLogo } from '../..';
+import { NavItem, NavLogo } from '@components/index';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { NavLangBtn } from '../NavLangOpt/NavLangOpt';

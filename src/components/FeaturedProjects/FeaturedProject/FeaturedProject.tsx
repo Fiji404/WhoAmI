@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ProjectDetailsModal } from '../ProjectDetailsModal/ProjectDetailsModal';
 import { createPortal } from 'react-dom';
 import { ProjectUsedStack } from './ProjectUsedStack';
-import { ProjectDetailsContext } from '../../../contexts/ProjectDetailsContext/ProjectDetailsContext';
+import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 import { motion } from 'framer-motion';
 
 interface Props {

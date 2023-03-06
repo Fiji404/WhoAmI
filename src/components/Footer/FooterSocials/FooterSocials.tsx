@@ -1,5 +1,5 @@
 import { SiDiscord, SiGithub } from 'react-icons/si';
-import { FaRedditAlien, FaTelegramPlane } from 'react-icons/fa';
+import { FaRedditAlien } from 'react-icons/fa';
 import { FooterSocialItem } from './FooterSocialItem';
 
 const SOCIALS_PLATFORMS = [

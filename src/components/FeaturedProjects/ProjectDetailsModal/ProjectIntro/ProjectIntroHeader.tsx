@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { IoMdClose } from 'react-icons/io';
-import { ProjectDetailsContext } from '../../../../contexts/ProjectDetailsContext/ProjectDetailsContext';
+import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 
 interface Props {
     projectName: string
