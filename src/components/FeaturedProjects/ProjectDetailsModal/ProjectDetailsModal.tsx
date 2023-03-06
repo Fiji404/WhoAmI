@@ -15,7 +15,7 @@ interface Props {
 export const ProjectDetailsModal = ({ projectName, usedStack }: Props) => {
     return (
         <>
-            <ProjectDetailsBackdrop />
+            <ProjectDetailsBackdrop projectName={projectName} />
             <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%] z-10 border border-[#414141] p-4 rounded-md bg-[#111] overflow-y-auto">
                 <motion.section
                     initial={{ opacity: 0.75, translateY: '50%' }}

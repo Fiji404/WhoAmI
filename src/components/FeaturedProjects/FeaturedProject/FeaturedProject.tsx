@@ -13,10 +13,10 @@ interface Props {
 }
 
 export const FeaturedProject = ({ projectName, description, usedStack }: Props) => {
-    const { isProjectDetailsOpen, openProjectDetailsHandler } = useContext(ProjectDetailsContext);
+    const { isProjectsDetailsOpen, openProjectDetailsHandler } = useContext(ProjectDetailsContext);
     return (
         <>
-            {isProjectDetailsOpen &&
+            {   isProjectsDetailsOpen[projectName] &&
                 createPortal(
                     <ProjectDetailsModal usedStack={usedStack} projectName={projectName} />,
                     document.body
@@ -34,7 +34,7 @@ export const FeaturedProject = ({ projectName, description, usedStack }: Props) 
                 <p className="mt-5 mb-3 text-center text-lg text-[#b4b4b4]">{description}</p>
                 <ProjectUsedStack usedLanguages={usedStack} />
                 <button
-                    onClick={openProjectDetailsHandler}
+                    onClick={() => openProjectDetailsHandler(projectName)}
                     className="mt-6 mx-auto w-[90%] flex justify-center items-center gap-2 bg-[#1b1b1b] text-white py-2 px-3 border border-accent rounded-full hover:bg-[#1f1f1f] active:bg-[#161616] transition-colors"
                 >
                     Learn more <BiDotsHorizontalRounded />

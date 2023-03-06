@@ -12,7 +12,7 @@ export const DetailsIntroHeader = ({ projectName }: Props) => {
         <header className="flex justify-between mb-4 pb-4 border-b border-[#2b2b2b]">
             <h2 className="text-white text-4xl font-bold">{projectName}</h2>
             <button
-                onClick={closeProjectDetailsHandler}
+                onClick={() => closeProjectDetailsHandler(projectName)}
                 className="aspect-square px-2 rounded-md bg-[#141414] border border-accent hover:bg-[#181818] transition-colors"
                 aria-label="close project details"
             >
