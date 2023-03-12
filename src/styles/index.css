@@ -87,7 +87,10 @@
         @apply font-heading text-center text-white;
     }
     .mobile-nav {
-        @apply flex-col absolute right-0 -bottom-2 translate-y-full bg-[rgb(19,19,19)] p-3 items-center border border-[#272727] gap-3 origin-top transition-transform;
+        @apply hidden scale-x-0 mt-4 items-center gap-3 origin-left transition-transform scale-x-0;
+    }
+    .mobile-open {
+        @apply flex
     }
     .mobile-nav li {
         @apply w-full;

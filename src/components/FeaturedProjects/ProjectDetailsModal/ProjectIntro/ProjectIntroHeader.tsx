@@ -9,7 +9,7 @@ interface Props {
 export const DetailsIntroHeader = ({ projectName }: Props) => {
     const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext)
     return (
-        <header className="flex justify-between mb-4 pb-4 border-b border-[#2b2b2b]">
+        <header className="flex justify-between p-4 border-b border-[#2b2b2b] sticky top-0 bg-[#111] rounded-tr-md rounded-tl-md">
             <h2 className="text-white text-4xl font-bold">{projectName}</h2>
             <button
                 onClick={() => closeProjectDetailsHandler(projectName)}

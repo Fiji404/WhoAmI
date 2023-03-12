@@ -26,7 +26,7 @@ export const FeaturedProject = ({ projectName, description, usedStack }: Props) 
                 whileInView={{ opacity: 1, translateY: 0 }}
                 className="grow p-4 bg-[rgba(21,21,21,0.7)] border border-accent rounded-md backdrop-blur-sm max-w-[550px] relative overflow-hidden"
             >
-                <header>
+                <header className='sticky top-0'>
                     <h2 className="text-white font-semibold text-center text-4xl rounded-md">
                         {projectName}
                     </h2>

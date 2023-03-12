@@ -29,26 +29,33 @@ export const Nav = () => {
         });
     };
 
+    const navList = (
+        <motion.ul
+            animate={isMobileNavOpen && { display: 'flex', scaleX: 1 }}
+            transition={{ duration: 0.1 }}
+            className={`flex gap-3 items-center text-[#fff] font-semibold rounded-sm sm:mobile-nav`}
+        >
+            {PAGE_LINKS.map(({ href, text, target }, i) => (
+                <NavItem key={i} text={t(text)} {...{ href, target }} />
+            ))}
+        </motion.ul>
+    );
+
     return (
         <motion.nav
             initial={{ opacity: 0, translateY: '-200%' }}
             animate={{ opacity: 1, translateY: 0 }}
-            className="bg-[rgba(19,19,19,0.79)] py-3 px-5 border-b border-b-accent flex justify-between items-center sticky top-0 w-full z-10 backdrop-blur-sm "
+            className="bg-[rgba(19,19,19,0.79)] py-3 px-5 border-b border-b-accent sticky top-0 w-full z-10 backdrop-blur-sm "
         >
-            <NavLogo />
-            <div className="flex items-center gap-2 relative">
-                <ul
-                    className={`flex gap-3 items-center text-[#fff] font-semibold rounded-sm sm:mobile-nav ${
-                        isMobileNavOpen ? 'scale-y-100' : 'sm:scale-y-0'
-                    }`}
-                >
-                    {PAGE_LINKS.map(({ href, text, target }, i) => (
-                        <NavItem key={i} text={t(text)} {...{ href, target }} />
-                    ))}
-                </ul>
-                <NavLangBtn onLangListOpen={langListOpenHandler} isLangListOpen={isLangListOpen} />
-                <NavMobileBtn onNavOpen={navOpenHandler} />
+            <div className="flex justify-between items-center">
+                <NavLogo />
+                <div className="flex items-center gap-2 relative">
+                    {!isMobileNavOpen && navList}
+                    <NavLangBtn onLangListOpen={langListOpenHandler} isLangListOpen={isLangListOpen} />
+                    <NavMobileBtn onNavOpen={navOpenHandler} />
+                </div>
             </div>
+            {isMobileNavOpen && navList}
         </motion.nav>
     );
 };

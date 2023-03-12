@@ -5,7 +5,7 @@ interface Props {
     projectName: string;
 }
 
-export const ProjectDetailsBackdrop = ({projectName}: Props) => {
+export const ProjectDetailsBackdrop = ({ projectName }: Props) => {
     const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext);
     return (
         <div

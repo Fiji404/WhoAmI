@@ -1,8 +1,7 @@
 import { PropsWithChildren, useState } from 'react';
 import { ProjectDetailsContext } from './ProjectDetailsContext';
 
-type ProjectInfo = string
-
+type ProjectInfo = string;
 
 export const ProjectDetailsProvider = ({ children }: PropsWithChildren) => {
     const [isProjectsDetailsOpen, setIsProjectsDetailsOpen] = useState({
