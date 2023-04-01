@@ -1,13 +1,21 @@
-# WhoAmI
+# Fiji404 portfolio website
 
-This is a portfolio website which describe my person.
+## Overview
 
-## Used tools
+This project is about personal portfolio website to showcase my skills, experience, and projects.
 
--   React-TS
+## Tech Stack
+
+-   React
+-   TypeScript
 -   TailwindCSS
 -   Framer Motion
 
-## Demo
+## Preview
 
-Portfolio website you can check there [Fiji404](https://fiji404.pro)
+![Landing page screenshot](https://github.com/Fiji404/WhoAmI/blob/master/public/landing-page-preview.png)
+![Project description modal preview](https://github.com/Fiji404/WhoAmI/blob/master/public/project-desc-preview.png)
+
+## Live preview
+
+[Fiji404](https://fiji404.pro/)

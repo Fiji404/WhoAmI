@@ -1,4 +1,4 @@
-import { Nav, WelcomeHeader, AboutMe, FeaturedProjects, ParticlesBg, ContactMe, Footer } from './components';
+import { Nav, WelcomeHeader, AboutMe, FeaturedProjects, ContactMe, Footer, ParticlesBg } from './components';
 import { LangProvider } from './contexts/LangContext/LangProvider';
 
 export const App = () => {

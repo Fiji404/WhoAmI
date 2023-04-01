@@ -26,11 +26,15 @@ export const ProjectPreviewImage = ({ path, desc }: Props) => {
     };
 
     const foldImageHandler = () => {
-        if (isImageExpanded) setIsImageExpanded(false)
-    }
+        if (isImageExpanded) setIsImageExpanded(false);
+    };
 
     return (
-        <div onClick={foldImageHandler} className={`${isImageExpanded && 'fixed h-screen w-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00000085]'}`}>
+        <>
+            <div
+                onClick={foldImageHandler}
+                className={`${isImageExpanded && 'fixed w-screen h-screen -translate-y-full -translate-x-1/2 bg-[#000000da]'}`}
+            ></div>
             <motion.img
                 layout
                 onClick={expandImageHandler}
@@ -40,6 +44,6 @@ export const ProjectPreviewImage = ({ path, desc }: Props) => {
                 src={path}
                 alt={desc}
             />
-        </div>
+        </>
     );
 };

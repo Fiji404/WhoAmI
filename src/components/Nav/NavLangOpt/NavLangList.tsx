@@ -2,6 +2,21 @@ import { motion } from 'framer-motion';
 import { NavLangListItem } from './NavLangListItem';
 import { LangContext } from '@/contexts/LangContext/langContext';
 import { useContext } from 'react';
+import plFlag from '/src/assets/pl.svg';
+import gbFlag from '/src/assets/gb.svg';
+
+const LANGUAGES = [
+    {
+        langName: 'pl',
+        icon: plFlag,
+        alt: 'Poland flag',
+    },
+    {
+        langName: 'en',
+        icon: gbFlag,
+        alt: 'UK flag',
+    },
+];
 
 interface Props {
     isListOpen: boolean;
@@ -13,14 +28,19 @@ export const NavLangList = ({ isListOpen }: Props) => {
     return (
         <motion.ul
             initial={{ scaleY: 0 }}
-            animate={isListOpen ? { scaleY: 1, translateY: '100%' } : { scaleY: 0, translateY: '100%' }}
-            className={`absolute flex flex-col -bottom-1 translate-y-full text-center origin-top border border-[#313131] overflow-hidden rounded-sm overflow-hidden" ${
+            animate={
+                isListOpen
+                    ? { scaleY: 1, translateX: '-50%', translateY: '100%' }
+                    : { scaleY: 0, translateX: '-50%', translateY: '100%' }
+            }
+            className={`w-max absolute flex flex-col -bottom-1 left-0 text-center origin-top border border-[#313131] rounded-sm ${
                 isListOpen && 'scale-y-0'
             }`}
             onClick={updateLang}
         >
-            <NavLangListItem langOpt="pl" />
-            <NavLangListItem langOpt="en" />
+            {LANGUAGES.map(props => (
+                <NavLangListItem key={props.langName} {...props} />
+            ))}
         </motion.ul>
     );
 };

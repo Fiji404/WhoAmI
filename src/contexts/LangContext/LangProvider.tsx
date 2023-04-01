@@ -13,7 +13,7 @@ export const LangProvider = ({ children }: PropsWithChildren) => {
 
     const changeLanguageHandler = ({ target }: React.MouseEvent) => {
         if (!(target instanceof Element)) return;
-        const chosenLanguage = target.textContent;
+        const chosenLanguage = target.closest('li')?.querySelector('button')?.textContent;
         if (chosenLanguage) setCurrentLang(chosenLanguage);
     };
 

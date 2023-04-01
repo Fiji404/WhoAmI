@@ -15,8 +15,10 @@
             "Featured Projects": "Featured projects",
             "Contact me": "Contact me",
             "Full name": "Full name",
+            "Subject": "Subject",
             "Hello 👋, I'm writing you because...": "Hello 👋, I'm writing you because...",
-            "Send": "Send"
+            "Send": "Send",
+            "Learn more ": "Learn more"
         }
     },
     "pl": {
@@ -35,8 +37,10 @@
             "Featured Projects": "Wyróżnione projekty",
             "Contact me": "Skontaktuj się ze mną",
             "Full name": "Imię i nazwisko",
+            "Subject": "Temat",
             "Hello 👋, I'm writing you because...": "Cześć 👋, Piszę do ciebie ponieważ...",
-            "Send": "Wyślij"
+            "Send": "Wyślij",
+            "Learn more ": "Zobacz więcej "
         }
     }
 }

@@ -16,7 +16,7 @@ export const FeaturedProject = ({ projectName, description, usedStack }: Props) 
     const { isProjectsDetailsOpen, openProjectDetailsHandler } = useContext(ProjectDetailsContext);
     return (
         <>
-            {   isProjectsDetailsOpen[projectName] &&
+            {isProjectsDetailsOpen[projectName] &&
                 createPortal(
                     <ProjectDetailsModal usedStack={usedStack} projectName={projectName} />,
                     document.body
@@ -24,9 +24,10 @@ export const FeaturedProject = ({ projectName, description, usedStack }: Props) 
             <motion.section
                 initial={{ opacity: 0.7, translateY: '50%' }}
                 whileInView={{ opacity: 1, translateY: 0 }}
+                viewport={{ once: true }}
                 className="grow p-4 bg-[rgba(21,21,21,0.7)] border border-accent rounded-md backdrop-blur-sm max-w-[550px] relative overflow-hidden"
             >
-                <header className='sticky top-0'>
+                <header className="sticky top-0">
                     <h2 className="text-white font-semibold text-center text-4xl rounded-md">
                         {projectName}
                     </h2>

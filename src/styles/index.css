@@ -74,9 +74,6 @@
         width: min(95%, 170px);
         @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-2 px-4 rounded-md border border-accent text-[#dfdfdf] hover:bg-[#161616] hover:shadow-md hover:border-[#202020] text-xl transition-colors;
     }
-    .lang-opt {
-        @apply py-1 px-2 bg-[#1d1d1d] hover:bg-[#242424] transition-colors;
-    }
     .heading {
         width: min(95%, 600px);
         font-size: clamp(3rem, 3vw + 2rem, 5.5rem);
