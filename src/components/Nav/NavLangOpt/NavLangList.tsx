@@ -3,7 +3,7 @@ import { NavLangListItem } from './NavLangListItem';
 import { LangContext } from '@/contexts/LangContext/langContext';
 import { useContext } from 'react';
 import plFlag from '/src/assets/pl.svg';
-import gbFlag from '/src/assets/gb.svg';
+import usaFlag from '/src/assets/usa.svg';
 
 const LANGUAGES = [
     {
@@ -13,8 +13,8 @@ const LANGUAGES = [
     },
     {
         langName: 'en',
-        icon: gbFlag,
-        alt: 'UK flag',
+        icon: usaFlag,
+        alt: 'USA flag',
     },
 ];
 

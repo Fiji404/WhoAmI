@@ -11,7 +11,7 @@ interface Props {
     projectName: string;
 }
 
-export const ProjectSummary = ({ projectName }: Props) => {
+export const ProjectDescription = ({ projectName }: Props) => {
     return (
         <div className="mt-6">
             <h2 className="text-[#fff] flex gap-2 text-3xl font-semibold items-center">

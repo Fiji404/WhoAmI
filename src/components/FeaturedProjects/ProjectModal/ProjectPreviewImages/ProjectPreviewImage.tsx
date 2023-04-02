@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Variants, motion } from 'framer-motion';
-import { createPortal } from 'react-dom';
 
 interface Props {
     path: string;
@@ -14,26 +13,23 @@ const variants: Variants = {
         position: 'fixed',
         top: '50%',
         left: '50%',
-        translate: '-50% -50%',
+        translate: '-50% -50%'
     },
-    closed: { height: '200px', width: '300px' },
+    closed: { height: '200px', width: '300px' }
 };
 
 export const ProjectPreviewImage = ({ path, desc }: Props) => {
     const [isImageExpanded, setIsImageExpanded] = useState(false);
-    const expandImageHandler = () => {
-        setIsImageExpanded(isExpanded => !isExpanded);
-    };
-
-    const foldImageHandler = () => {
-        if (isImageExpanded) setIsImageExpanded(false);
-    };
+    const expandImageHandler = () => setIsImageExpanded(isExpanded => !isExpanded);
+    const foldImageHandler = () => isImageExpanded && setIsImageExpanded(false);
 
     return (
         <>
             <div
                 onClick={foldImageHandler}
-                className={`${isImageExpanded && 'fixed w-screen h-screen -translate-y-full -translate-x-1/2 bg-[#000000da]'}`}
+                className={`${
+                    isImageExpanded && 'fixed w-screen h-screen -translate-y-full -translate-x-1/2 bg-[#000000da]'
+                }`}
             ></div>
             <motion.img
                 layout

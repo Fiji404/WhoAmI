@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { ProjectDetailsBackdrop } from './ProjectDetailsBackdrop';
-import { DetailsIntroHeader } from './ProjectIntro/ProjectIntroHeader';
-import { ProjectSummary } from './ProjectIntro/ProjectSummary';
-import { ProjectUsedStack } from '../FeaturedProject/ProjectUsedStack';
+import { DetailsIntroHeader } from './ProjectIntro/ProjectIntro';
+import { ProjectDescription } from './ProjectDescription/ProjectDescription';
+import { ProjectUsedStack } from '../FeaturedProject/ProjectTechStack';
 import { ProjectFeatures } from './ProjectFeatures';
-import { ProjectPreviewLinks } from './ProjectPreviewLinks/ProjectPreviewLinks';
+import { ProjectPreviewLinks } from './ProjectLinks/ProjectLinks';
 import { BsStack } from 'react-icons/bs';
 import { ProjectPreviewImages } from './ProjectPreviewImages/ProjectPreviewImages';
 
@@ -24,7 +24,7 @@ export const ProjectDetailsModal = ({ projectName, usedStack }: Props) => {
                 >
                     <DetailsIntroHeader projectName={projectName} />
                     <div className="px-4 pb-3 max-h-full h-[65vh] overflow-y-auto">
-                        <ProjectSummary projectName={projectName} />
+                        <ProjectDescription projectName={projectName} />
                         <h2 className="flex gap-2 items-center my-4 text-[#fff] text-3xl font-semibold">
                             Used stack <BsStack color="#2dc284" />
                         </h2>

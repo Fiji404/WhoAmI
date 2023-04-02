@@ -3,11 +3,11 @@ import { IoMdClose } from 'react-icons/io';
 import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 
 interface Props {
-    projectName: string
+    projectName: string;
 }
 
 export const DetailsIntroHeader = ({ projectName }: Props) => {
-    const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext)
+    const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext);
     return (
         <header className="flex justify-between p-4 border-b border-[#2b2b2b] sticky top-0 bg-[#111] rounded-tr-md rounded-tl-md">
             <h2 className="text-white text-4xl font-bold">{projectName}</h2>

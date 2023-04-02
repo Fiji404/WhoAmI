@@ -17,28 +17,25 @@ export const WelcomeHeader = () => {
     });
     const variants: Variants = {
         visible: (delay: VariantsArgs) => ({ opacity: 1, transition: { delay } }),
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 }
     };
     return (
         <>
             <section className="max-w-[85%] h-screen mx-auto">
                 <div className="flex flex-col items-center justify-center h-full  py-7">
                     <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
-                        <SectionHeading
-                            styles="heading"
-                            text={t("I'm a thriving frontend developer")}
-                        />
+                        <SectionHeading styles="heading" text={t("I'm a thriving frontend developer")} />
                         <motion.img
                             initial={{ opacity: 0, scale: 0.7, filter: 'drop-shadow(0 0 0 transparent)' }}
                             animate={{ opacity: 1, scale: 1, transition: { delay: 1 } }}
                             whileHover={{
                                 translateY: '-5%',
                                 filter: 'drop-shadow(0 0 5px #9BDBDC)',
-                                transition: { delay: 0 },
+                                transition: { delay: 0 }
                             }}
                             src="/reddit-avatar.png"
                             alt="My reddit avatar"
-                            className='sm:max-w-[80%]'
+                            className="sm:max-w-[80%]"
                         />
                     </div>
                     <motion.div

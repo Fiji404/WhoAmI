@@ -13,8 +13,8 @@ const FEATURED_PROJECTS = [
         usedStack: [
             { lang: 'HTML', langIcon: <SiHtml5 /> },
             { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
-            { lang: 'TypeScript', langIcon: <SiTypescript /> },
-        ],
+            { lang: 'TypeScript', langIcon: <SiTypescript /> }
+        ]
     },
     {
         projectName: 'My Todos',
@@ -23,9 +23,9 @@ const FEATURED_PROJECTS = [
         usedStack: [
             { lang: 'Astro', langIcon: <FaStrava /> },
             { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
-            { lang: 'TypeScript', langIcon: <SiTypescript /> },
-        ],
-    },
+            { lang: 'TypeScript', langIcon: <SiTypescript /> }
+        ]
+    }
 ];
 
 export const FeaturedProjects = () => {
@@ -35,8 +35,8 @@ export const FeaturedProjects = () => {
             <SectionHeading text={t('Featured Projects')} />
             <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
                 <ProjectDetailsProvider>
-                    {FEATURED_PROJECTS.map((prjDetails, i) => (
-                        <FeaturedProject key={i} {...prjDetails} />
+                    {FEATURED_PROJECTS.map(prjDetails => (
+                        <FeaturedProject key={prjDetails.projectName} {...prjDetails} />
                     ))}
                 </ProjectDetailsProvider>
             </ul>

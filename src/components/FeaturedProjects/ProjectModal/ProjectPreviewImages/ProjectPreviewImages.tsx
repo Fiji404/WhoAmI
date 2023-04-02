@@ -11,23 +11,23 @@ const PREVIEW_IMAGES_PATHS = {
     'Quick Tips': [
         {
             path: quickTipsDesktopImg,
-            desc: 'Represents desktop view of quick tips app',
+            desc: 'Represents desktop view of quick tips app'
         },
         {
             path: quickTipsMobileImg,
-            desc: 'Represents mobile view of quick tips app',
-        },
+            desc: 'Represents mobile view of quick tips app'
+        }
     ],
     'My Todos': [
         {
             path: myTodosDesktopImg,
-            desc: 'Represents desktop view of my todos app',
+            desc: 'Represents desktop view of my todos app'
         },
         {
             path: myTodosMobileImg,
-            desc: 'Represents mobile view of my todos app',
-        },
-    ],
+            desc: 'Represents mobile view of my todos app'
+        }
+    ]
 };
 
 export const ProjectPreviewImages = () => {
@@ -38,14 +38,13 @@ export const ProjectPreviewImages = () => {
                 Screenshots <RiScreenshot2Line />
             </h2>
             <div className="flex gap-4 overflow-y-auto snap-mandatory snap-x">
-                {isProjectsDetailsOpen['Quick Tips'] &&
-                    PREVIEW_IMAGES_PATHS['Quick Tips'].map((props, i) => (
-                        <ProjectPreviewImage key={i} {...props} />
-                    ))}
-                {isProjectsDetailsOpen['My Todos'] &&
-                    PREVIEW_IMAGES_PATHS['My Todos'].map((props, i) => (
-                        <ProjectPreviewImage key={i} {...props} />
-                    ))}
+                {isProjectsDetailsOpen['Quick Tips']
+                    ? PREVIEW_IMAGES_PATHS['Quick Tips'].map(images => (
+                          <ProjectPreviewImage key={images.desc} {...images} />
+                      ))
+                    : PREVIEW_IMAGES_PATHS['My Todos'].map(images => (
+                          <ProjectPreviewImage key={images.desc} {...images} />
+                      ))}
             </div>
         </section>
     );

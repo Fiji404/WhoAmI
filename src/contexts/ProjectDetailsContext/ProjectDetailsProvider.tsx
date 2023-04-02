@@ -6,19 +6,19 @@ type ProjectInfo = string;
 export const ProjectDetailsProvider = ({ children }: PropsWithChildren) => {
     const [isProjectsDetailsOpen, setIsProjectsDetailsOpen] = useState({
         'Quick Tips': false,
-        'My Todos': false,
+        'My Todos': false
     });
     const openProjectDetailsHandler = (projectName: ProjectInfo) => {
         setIsProjectsDetailsOpen(prevProjectDetailsOpen => ({
             ...prevProjectDetailsOpen,
-            [projectName]: true,
+            [projectName]: true
         }));
     };
 
     const closeProjectDetailsHandler = (projectName: ProjectInfo) => {
         setIsProjectsDetailsOpen(prevProjectDetailsOpen => ({
             ...prevProjectDetailsOpen,
-            [projectName]: false,
+            [projectName]: false
         }));
     };
 

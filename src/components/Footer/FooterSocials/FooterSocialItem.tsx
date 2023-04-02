@@ -1,14 +1,14 @@
 interface Props {
-    platform: string;
-    platformIcon: JSX.Element;
+    socialName: string;
+    socialIcon: JSX.Element;
     URL: string;
 }
 
-export const FooterSocialItem = ({ platform, platformIcon, URL }: Props) => {
+export const FooterSocialItem = ({ socialName, socialIcon, URL }: Props) => {
     return (
         <li>
             <a target="_blank" className="btn" href={URL}>
-                {platform} {platformIcon}
+                {socialName} {socialIcon}
             </a>
         </li>
     );

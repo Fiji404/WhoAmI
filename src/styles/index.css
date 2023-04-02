@@ -37,7 +37,7 @@
         @apply bg-[#1a1a1a] py-1 px-3 text-xl rounded-[3px] border border-[#272727] flex items-center gap-2;
     }
     .diagram-row {
-        @apply flex gap-6 border border-accent px-3 py-4 rounded-md sm:flex-col;
+        @apply flex gap-6 border border-accent px-3 py-4 rounded-md sm:flex-col transition-colors;
     }
     .diagram-label {
         @apply flex items-center justify-center text-white font-consolas text-center pl-1 relative w-full max-w-[130px] border-r px-5 border-[#202020] sm:max-w-none sm:border-r-0 sm:border-b sm:pb-3;
@@ -46,7 +46,7 @@
         @apply flex items-center text-[#b4b4b4] font-consolas sm:justify-center;
     }
     .skill-item {
-        @apply flex items-center justify-center gap-2 py-[10px] px-2 border-accent bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-[3px] hover:bg-[rgba(22,22,22,0.92)]  hover:text-white grow transition-colors;
+        @apply flex items-center justify-center gap-2 py-[10px] px-2 border-[#202020] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-md hover:bg-[rgba(22,22,22,0.92)] hover:border-[#2e2e2e]  hover:text-white grow transition-colors;
     }
     .skill-item[data-lang='react']:hover svg {
         color: #61dafb;
@@ -68,11 +68,11 @@
         @apply w-[95%] max-w-[1500px] mx-auto;
     }
     .input {
-        @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-accent text-[#dfdfdf] text-xl min-h-[50px] focus:outline-none focus:border-[#363636] transition-colors;
+        @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-accent text-[#dfdfdf] text-xl min-h-[50px] focus:outline-[#161616] transition-colors;
     }
     .btn {
         width: min(95%, 170px);
-        @apply flex gap-2 justify-center items-center bg-[rgb(20,20,20)] py-2 px-4 rounded-md border border-accent text-[#dfdfdf] hover:bg-[#161616] hover:shadow-md hover:border-[#202020] text-xl transition-colors;
+        @apply flex gap-2 justify-center items-center bg-[#161616] py-2 px-4 rounded-md border border-[#202020] text-[#dfdfdf] hover:bg-[#1b1b1b] hover:border-[#292929] text-xl transition-colors;
     }
     .heading {
         width: min(95%, 600px);

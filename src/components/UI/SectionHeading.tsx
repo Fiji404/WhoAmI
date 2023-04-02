@@ -1,5 +1,5 @@
 import { Variants, motion } from 'framer-motion';
-import { Fragment } from 'react'
+import { Fragment } from 'react';
 
 interface Props {
     text: string;
@@ -9,22 +9,22 @@ interface Props {
 const variants: Variants = {
     visible: {
         transition: {
-            staggerChildren: 0.025,
-        },
-    },
+            staggerChildren: 0.025
+        }
+    }
 };
 
 const item: Variants = {
     hidden: {
         y: '100%',
         color: '#111',
-        transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85, repeat: 1 },
+        transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85, repeat: 1 }
     },
     visible: {
         y: 0,
         color: '#fff',
-        transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.55 },
-    },
+        transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.55 }
+    }
 };
 
 export const SectionHeading = ({ text, styles }: Props) => {
