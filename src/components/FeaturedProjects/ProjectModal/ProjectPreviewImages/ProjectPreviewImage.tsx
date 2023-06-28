@@ -15,7 +15,7 @@ const variants: Variants = {
         left: '50%',
         translate: '-50% -50%'
     },
-    closed: { height: '200px', width: '300px' }
+    closed: { width: '100%', maxWidth: '450px', aspectRatio: '16 / 9' }
 };
 
 export const ProjectPreviewImage = ({ path, desc }: Props) => {
@@ -28,7 +28,7 @@ export const ProjectPreviewImage = ({ path, desc }: Props) => {
             <div
                 onClick={foldImageHandler}
                 className={`${
-                    isImageExpanded && 'fixed w-screen h-screen -translate-y-full -translate-x-1/2 bg-[#000000da]'
+                    isImageExpanded ? 'fixed w-screen h-screen -translate-y-full -translate-x-1/2 bg-[#000000da]' : ''
                 }`}
             ></div>
             <motion.img
@@ -36,7 +36,8 @@ export const ProjectPreviewImage = ({ path, desc }: Props) => {
                 onClick={expandImageHandler}
                 animate={isImageExpanded ? 'open' : 'closed'}
                 variants={variants}
-                className={`text-white border border-[#2b2b2b] rounded-md cursor-pointer hover:border-[#383838] hover:brightness-125  transition-colors min-w-[300px] aspect-video snap-center`}
+                className="text-white border border-[#2b2b2b] rounded-md cursor-pointer hover:border-[#383838] hover:brightness-125  transition-colors snap-start
+                "
                 src={path}
                 alt={desc}
             />

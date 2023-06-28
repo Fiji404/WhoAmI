@@ -9,16 +9,16 @@
             "Fiji404 or Radek": "Fiji404 or Radek",
             "Description": "Description",
             "I am an eighteen-year-old boy from Poland who is interested in programming. I have been fascinated by technology and the way the internet works from a young age. Soon, I began to learn the ins and outs of programming, and I am currently developing my skills in this area. My passion is developing web applications and improving their functionality. I always try to learn new technologies and tools to create better and more innovative solutions. I want to develop my programming skills to work as a programmer in the future and contribute to the development of the IT industry.": "I am an eighteen-year-old boy from Poland who is interested in programming. I have been fascinated by technology and the way the internet works from a young age. Soon, I began to learn the ins and outs of programming, and I am currently developing my skills in this area. My passion is developing web applications and improving their functionality. I always try to learn new technologies and tools to create better and more innovative solutions. I want to develop my programming skills to work as a programmer in the future and contribute to the development of the IT industry.",
+            "My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.": "My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.",
             "My career": "My career",
             "Towards the end of 2021, I embarked on the journey of creating websites. I began by selecting two fundamental languages - HTML and CSS, and acquired knowledge through online tutorials on YouTube and official documentation, implementing my learning into personal projects. Later, I advanced my skills by learning JavaScript and TypeScript through comprehensive courses on Udemy, supplemented with personal projects. I then extended my knowledge by studying SASS and TailwindCSS. Presently, I am furthering my learning on React via Udemy.": "Towards the end of 2021, I embarked on the journey of creating websites. I began by selecting two fundamental languages - HTML and CSS, and acquired knowledge through online tutorials on YouTube and official documentation, implementing my learning into personal projects. Later, I advanced my skills by learning JavaScript and TypeScript through comprehensive courses on Udemy, supplemented with personal projects. I then extended my knowledge by studying SASS and TailwindCSS. Presently, I am furthering my learning on React via Udemy.",
             "Skills": "Skills",
             "Featured Projects": "Featured projects",
-            "Contact me": "Contact me",
-            "Full name": "Full name",
+            "This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.": "This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.",
             "Subject": "Subject",
             "Hello 👋, I'm writing you because...": "Hello 👋, I'm writing you because...",
             "Send": "Send",
-            "Learn more ": "Learn more"
+            "Learn more": "Learn more"
         }
     },
     "pl": {
@@ -32,6 +32,8 @@
             "Description": "Opis",
             "I am an eighteen-year-old boy from Poland who is interested in programming. I have been fascinated by technology and the way the internet works from a young age. Soon, I began to learn the ins and outs of programming, and I am currently developing my skills in this area. My passion is developing web applications and improving their functionality. I always try to learn new technologies and tools to create better and more innovative solutions. I want to develop my programming skills to work as a programmer in the future and contribute to the development of the IT industry.": "Jestem osiemnastoletnim chłopakiem z Polski zainteresowanym programowaniem. Od młodego wieku fascynowała mnie technologia i sposób, w jaki działa internet. Wkrótce zacząłem uczyć się programowania i obecnie rozwijam swoje umiejętności w tej dziedzinie. Moja pasja to tworzenie aplikacji internetowych i ulepszanie ich funkcjonalności. Zawsze staram się uczyć nowych technologii i narzędzi, aby tworzyć lepsze i bardziej innowacyjne rozwiązania. Chcę rozwijać swoje umiejętności programowania, aby w przyszłości móc pracować jako programista i przyczynić się do rozwoju branży IT.",
             "My career": "Moja kariera",
+            "My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.": "My todos to proste i przejrzyste narzędzie do zarządzania codziennymi zadaniami, umożliwiając użytkownikom tworzenie i organizowanie listy rzeczy do zrobienia. Strona internetowa ma czysty i minimalistyczny design, co ułatwia jej korzystanie i nawigację.",
+            "This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.": "To jest moja pierwsza aplikacja, którą stworzyłem ucząc się tworzenia stron internetowych. Jej celem jest tworzenie i udostępnianie wartościowych wskazówek dotyczących frontendu przez użytkowników platformy. Użytkownicy mogą dodawać własne porady po zarejestrowaniu się.",
             "Towards the end of 2021, I embarked on the journey of creating websites. I began by selecting two fundamental languages - HTML and CSS, and acquired knowledge through online tutorials on YouTube and official documentation, implementing my learning into personal projects. Later, I advanced my skills by learning JavaScript and TypeScript through comprehensive courses on Udemy, supplemented with personal projects. I then extended my knowledge by studying SASS and TailwindCSS. Presently, I am furthering my learning on React via Udemy.": "Pod koniec 2021 roku rozpocząłem swoją przygodę z tworzeniem stron internetowych. Zacząłem od wyboru dwóch podstawowych języków - HTML i CSS, zdobywając wiedzę poprzez poradniki online na YouTube oraz dzięki oficjalnej dokumentacji, wdrażając swoją naukę w praktyce poprzez własne projekty. Następnie poszerzyłem swoje umiejętności poprzez naukę języków JavaScript i TypeScript z pomocą kursów na Udemy, uzupełnionych o własne projekty. Później rozwijałem swoją wiedzę poprzez naukę SASS i TailwindCSS. Obecnie kontynuuję swoją naukę na platformie Udemy, ucząc się React'a.",
             "Skills": "Umiejętności",
             "Featured Projects": "Wyróżnione projekty",
@@ -40,7 +42,7 @@
             "Subject": "Temat",
             "Hello 👋, I'm writing you because...": "Cześć 👋, Piszę do ciebie ponieważ...",
             "Send": "Wyślij",
-            "Learn more ": "Zobacz więcej "
+            "Learn more": "Zobacz więcej"
         }
     }
 }

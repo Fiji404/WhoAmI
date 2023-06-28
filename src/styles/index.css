@@ -37,13 +37,13 @@
         @apply bg-[#1a1a1a] py-1 px-3 text-xl rounded-[3px] border border-[#272727] flex items-center gap-2;
     }
     .diagram-row {
-        @apply flex gap-6 border border-accent px-3 py-4 rounded-md sm:flex-col transition-colors;
+        @apply flex gap-6 border border-accent px-3 py-4 rounded-md smMax:flex-col transition-colors;
     }
     .diagram-label {
-        @apply flex items-center justify-center text-white font-consolas text-center pl-1 relative w-full max-w-[130px] border-r px-5 border-[#202020] sm:max-w-none sm:border-r-0 sm:border-b sm:pb-3;
+        @apply flex items-center justify-center text-white font-consolas text-center pl-1 relative w-full max-w-[130px] border-r px-5 border-[#202020] smMax:max-w-none smMax:border-r-0 smMax:border-b smMax:pb-3;
     }
     .diagram-desc {
-        @apply flex items-center text-[#b4b4b4] font-consolas sm:justify-center;
+        @apply flex items-center text-[#b4b4b4] font-consolas smMax:justify-center;
     }
     .skill-item {
         @apply flex items-center justify-center gap-2 py-[10px] px-2 border-[#202020] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-md hover:bg-[rgba(22,22,22,0.92)] hover:border-[#2e2e2e]  hover:text-white grow transition-colors;
@@ -84,10 +84,10 @@
         @apply font-heading text-center text-white;
     }
     .mobile-nav {
-        @apply hidden scale-x-0 mt-4 items-center gap-3 origin-left transition-transform scale-x-0;
+        @apply hidden mt-4 items-center gap-3;
     }
     .mobile-open {
-        @apply flex
+        @apply flex;
     }
     .mobile-nav li {
         @apply w-full;

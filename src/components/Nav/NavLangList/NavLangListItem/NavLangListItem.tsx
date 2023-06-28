@@ -18,7 +18,7 @@ export const NavLangListItem = ({ langName, icon, alt }: Props) => {
             >
                 {langName}
             </button>
-            <img className='w-[18px]' src={icon} alt={alt} />
+            <img className="w-[18px]" src={icon} alt={alt} />
         </li>
     );
 };

@@ -21,7 +21,7 @@ export const WelcomeHeader = () => {
     };
     return (
         <>
-            <section className="max-w-[85%] h-screen mx-auto">
+            <section className="max-w-[85%] h-[95vh] mx-auto">
                 <div className="flex flex-col items-center justify-center h-full  py-7">
                     <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
                         <SectionHeading styles="heading" text={t("I'm a thriving frontend developer")} />
