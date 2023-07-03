@@ -7,20 +7,20 @@ import { ProjectDetailsProvider } from '@/contexts/ProjectDetailsContext/Project
 
 const FEATURED_PROJECTS = [
     {
-        projectName: 'Quick Tips',
+        name: 'Quick Tips',
         description:
             'This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.',
-        usedStack: [
+            techList: [
             { lang: 'HTML', langIcon: <SiHtml5 /> },
             { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
             { lang: 'TypeScript', langIcon: <SiTypescript /> }
         ]
     },
     {
-        projectName: 'My Todos',
+        name: 'My Todos',
         description:
             'My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.',
-        usedStack: [
+            techList: [
             { lang: 'Astro', langIcon: <FaStrava /> },
             { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
             { lang: 'TypeScript', langIcon: <SiTypescript /> }
@@ -36,7 +36,7 @@ export const FeaturedProjects = () => {
             <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
                 <ProjectDetailsProvider>
                     {FEATURED_PROJECTS.map(prjDetails => (
-                        <FeaturedProject key={prjDetails.projectName} {...prjDetails} />
+                        <FeaturedProject key={prjDetails.name} {...prjDetails} />
                     ))}
                 </ProjectDetailsProvider>
             </ul>

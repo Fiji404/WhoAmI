@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { AboutMeDiagram } from '@components/index';
+import { AboutMeList } from '@components/index';
 import { SectionHeading } from '@components/UI/SectionHeading';
 
 export const AboutMe = () => {
@@ -7,7 +7,7 @@ export const AboutMe = () => {
     return (
         <section id="about" className="mt-20">
             <SectionHeading text={t('Facts about me')} />
-            <AboutMeDiagram />
+            <AboutMeList />
         </section>
     );
 };

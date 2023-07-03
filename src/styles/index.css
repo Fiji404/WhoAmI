@@ -48,20 +48,20 @@
     .skill-item {
         @apply flex items-center justify-center gap-2 py-[10px] px-2 border-[#202020] bg-[rgba(19,19,19,0.8)] text-[#a0a0a0] border rounded-md hover:bg-[rgba(22,22,22,0.92)] hover:border-[#2e2e2e]  hover:text-white grow transition-colors;
     }
-    .skill-item[data-lang='react']:hover svg {
+    .skill-item.react:hover svg {
         color: #61dafb;
     }
-    .skill-item[data-lang='astro']:hover svg,
-    .skill-item[data-lang='html']:hover svg {
+    .skill-item.astro:hover svg,
+    .skill-item.html:hover svg {
         color: #ff5d01;
     }
-    .skill-item[data-lang='tailwindcss']:hover svg {
+    .skill-item.tailwindcss:hover svg {
         color: #38bdf8;
     }
-    .skill-item[data-lang='sass']:hover svg {
+    .skill-item.sass:hover svg {
         color: #c66394;
     }
-    .skill-item[data-lang='typescript']:hover svg {
+    .skill-item.typescript:hover svg {
         color: #3178c6;
     }
     .container {

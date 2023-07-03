@@ -1,12 +1,20 @@
 import { SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { IoLogoSass } from 'react-icons/io';
-import { KnownLanguage } from './KnownLanguage';
+import { KnownLanguage } from './KnownLanguage/KnownLanguage';
 
 const KNOWN_LANGUAGES = [
-    { lang: 'React', langWebsite: 'https://beta.reactjs.org/', langIcon: <SiReact /> },
-    { lang: 'TailwindCSS', langWebsite: 'https://tailwindcss.com/', langIcon: <SiTailwindcss /> },
-    { lang: 'SASS', langWebsite: 'https://sass-lang.com/', langIcon: <IoLogoSass fontSize="1.3rem" /> },
-    { lang: 'TypeScript', langWebsite: 'https://www.typescriptlang.org/', langIcon: <SiTypescript /> }
+    { lang: 'React', langSiteURL: 'https://beta.reactjs.org/', langIcon: <SiReact /> },
+    { lang: 'TailwindCSS', langSiteURL: 'https://tailwindcss.com/', langIcon: <SiTailwindcss /> },
+    {
+        lang: 'SASS',
+        langSiteURL: 'https://sass-lang.com/',
+        langIcon: <IoLogoSass fontSize="1.3rem" />
+    },
+    {
+        lang: 'TypeScript',
+        langSiteURL: 'https://www.typescriptlang.org/',
+        langIcon: <SiTypescript />
+    }
 ];
 
 export const KnownLanguages = () => {

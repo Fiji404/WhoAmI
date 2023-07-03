@@ -1,5 +1,5 @@
 import { RiScreenshot2Line } from 'react-icons/ri';
-import { ProjectPreviewImage } from './ProjectPreviewImage';
+import { ProjectPreviewImage } from './ProjectPreviewImage/ProjectPreviewImage';
 import { useContext } from 'react';
 import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 import quickTipsDesktopImg from '@/assets/quick-tips-desktop.png';

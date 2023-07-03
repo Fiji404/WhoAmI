@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 interface Props {
-    rowLabel: string;
-    rowContent: string | JSX.Element;
+    title: string;
+    content: string | React.ReactNode;
 }
 
-export const AboutMeDiagramItem = ({ rowLabel, rowContent }: Props) => {
+export const AboutMeListItem = ({ title, content }: Props) => {
     const { t } = useTranslation();
     return (
         <motion.li
@@ -16,8 +16,8 @@ export const AboutMeDiagramItem = ({ rowLabel, rowContent }: Props) => {
             transition={{ duration: 0.5 }}
             className="diagram-row grow"
         >
-            <h2 className="diagram-label">{t(rowLabel)}</h2>
-            {typeof rowContent === 'string' ? <p className="diagram-desc">{t(rowContent)}</p> : rowContent}
+            <h2 className="diagram-label">{t(title)}</h2>
+            {typeof content === 'string' ? <p className="diagram-desc">{t(content)}</p> : content}
         </motion.li>
     );
 };

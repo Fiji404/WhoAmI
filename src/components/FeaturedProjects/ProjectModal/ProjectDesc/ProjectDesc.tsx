@@ -8,17 +8,17 @@ const PROJECTS_DESCRIPTION: Record<string, string> = {
 };
 
 interface Props {
-    projectName: string;
+    name: string;
 }
 
-export const ProjectDescription = ({ projectName }: Props) => {
+export const ProjectDesc = ({ name }: Props) => {
     return (
         <div className="mt-6">
             <h2 className="text-[#fff] flex gap-2 text-3xl font-semibold items-center">
                 About this project
                 <FcAbout />
             </h2>
-            <p className="mt-3 text-xl text-[#B4B4B4]">{PROJECTS_DESCRIPTION[projectName]}</p>
+            <p className="mt-3 text-xl text-[#B4B4B4]">{PROJECTS_DESCRIPTION[name]}</p>
         </div>
     );
 };

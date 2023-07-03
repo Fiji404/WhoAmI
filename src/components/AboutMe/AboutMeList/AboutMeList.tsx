@@ -1,5 +1,5 @@
 import { KnownLanguages } from '../KnownLanguages/KnownLanguages';
-import { AboutMeDiagramItem } from './AboutMeDiagramItem';
+import { AboutMeListItem } from './AboutMeListItem/AboutMeListItem';
 
 const ABOUT_ME_INFO = [
     { title: 'Username', content: 'Fiji404 or Radek :D' },
@@ -16,11 +16,11 @@ const ABOUT_ME_INFO = [
     { title: 'Skills', content: <KnownLanguages /> }
 ];
 
-export const AboutMeDiagram = () => {
+export const AboutMeList = () => {
     return (
         <ul className="mt-10 flex flex-col justify-center gap-4 mx-auto backdrop-blur-sm w-[95%] max-w-[1500px]">
             {ABOUT_ME_INFO.map(({ title, content }) => (
-                <AboutMeDiagramItem key={title} rowLabel={title} rowContent={content} />
+                <AboutMeListItem key={title} title={title} content={content} />
             ))}
         </ul>
     );
