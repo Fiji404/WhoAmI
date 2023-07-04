@@ -68,7 +68,7 @@
         @apply w-[95%] max-w-[1500px] mx-auto;
     }
     .input {
-        @apply bg-[rgba(21,21,21,0.7)] py-1 px-2 rounded-md border border-accent text-[#dfdfdf] text-xl min-h-[50px] focus:outline-[#161616] transition-colors;
+        @apply bg-[rgba(21,21,21,0.9)] py-1 px-2 rounded-md border border-accent text-[#dfdfdf] text-xl min-h-[50px] focus:outline-[#161616] transition-colors;
     }
     .btn {
         width: min(95%, 170px);

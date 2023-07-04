@@ -18,7 +18,7 @@ const ABOUT_ME_INFO = [
 
 export const AboutMeList = () => {
     return (
-        <ul className="mt-10 flex flex-col justify-center gap-4 mx-auto backdrop-blur-sm w-[95%] max-w-[1500px]">
+        <ul className="mt-10 flex flex-col justify-center gap-4 mx-auto  w-[95%] max-w-[1500px]">
             {ABOUT_ME_INFO.map(({ title, content }) => (
                 <AboutMeListItem key={title} title={title} content={content} />
             ))}
