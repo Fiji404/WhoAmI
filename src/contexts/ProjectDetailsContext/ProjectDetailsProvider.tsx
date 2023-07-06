@@ -1,30 +1,34 @@
 import { PropsWithChildren, useState } from 'react';
 import { ProjectDetailsContext } from './ProjectDetailsContext';
 
-type ProjectInfo = string;
+type ProjectNames = 'Quick Tips' | 'My Todos';
 
 export const ProjectDetailsProvider = ({ children }: PropsWithChildren) => {
-    const [isProjectsDetailsOpen, setIsProjectsDetailsOpen] = useState({
+    const [isProjectModalOpen, setIsProjectModalOpen] = useState({
         'Quick Tips': false,
         'My Todos': false
     });
-    const openProjectDetailsHandler = (projectName: ProjectInfo) => {
-        setIsProjectsDetailsOpen(prevProjectDetailsOpen => ({
-            ...prevProjectDetailsOpen,
-            [projectName]: true
+    const [isProjectPreviewImageOpen, setIsProjectPreviewImageOpen] = useState(false);
+
+    const toggleProjectModalVisibility = (projectName: ProjectNames) => {
+        setIsProjectModalOpen(p => ({
+            ...p,
+            [projectName]: !p[projectName]
         }));
     };
 
-    const closeProjectDetailsHandler = (projectName: ProjectInfo) => {
-        setIsProjectsDetailsOpen(prevProjectDetailsOpen => ({
-            ...prevProjectDetailsOpen,
-            [projectName]: false
-        }));
+    const toggleProjectPreviewImageVisibility = () => {
+        setIsProjectPreviewImageOpen(p => !p);
     };
 
     return (
         <ProjectDetailsContext.Provider
-            value={{ openProjectDetailsHandler, closeProjectDetailsHandler, isProjectsDetailsOpen }}
+            value={{
+                toggleProjectModalVisibility,
+                isProjectModalOpen,
+                isProjectPreviewImageOpen,
+                toggleProjectPreviewImageVisibility
+            }}
         >
             {children}
         </ProjectDetailsContext.Provider>

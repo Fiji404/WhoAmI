@@ -1,7 +1,7 @@
+import { FormActionTypes } from '@/types/hooks/UseForm/useForm';
 import { useReducer } from 'react';
 
 type FormData = typeof INITIAL_FORM_DATA;
-type FormActionTypes = 'FULL_NAME' | 'EMAIL_SUBJECT' | 'EMAIL_TEXT';
 type FormAction = { type: FormActionTypes; value: string };
 
 const INITIAL_FORM_DATA = {

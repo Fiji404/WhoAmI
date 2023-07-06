@@ -14,12 +14,12 @@ interface Props {
 }
 
 export const FeaturedProject = ({ name, description, techList }: Props) => {
-    const { isProjectsDetailsOpen, openProjectDetailsHandler } = useContext(ProjectDetailsContext);
+    const { isProjectModalOpen, toggleProjectModalVisibility } = useContext(ProjectDetailsContext);
     const { t } = useTranslation();
 
     return (
         <li>
-            {isProjectsDetailsOpen[name] &&
+            {isProjectModalOpen[name] &&
                 createPortal(<ProjectModal {...{ techList, name }} />, document.body)}
             <motion.section
                 initial={{ opacity: 0.7, translateY: '50%' }}
@@ -31,7 +31,7 @@ export const FeaturedProject = ({ name, description, techList }: Props) => {
                 <p className="mt-5 mb-3 text-center text-lg text-[#a0a0a0]">{t(description)}</p>
                 <FeaturedProjectStack techList={techList} />
                 <button
-                    onClick={() => openProjectDetailsHandler(name)}
+                    onClick={() => toggleProjectModalVisibility(name)}
                     className="mt-6 mx-auto w-[90%] flex justify-center items-center gap-2 bg-[#141414] text-[#a0a0a0] py-2 px-3 border border-accent rounded-full hover:bg-[#161616] hover:text-white active:bg-[#161616] transition-colors"
                 >
                     {t('Learn more')} <BiDotsHorizontalRounded />

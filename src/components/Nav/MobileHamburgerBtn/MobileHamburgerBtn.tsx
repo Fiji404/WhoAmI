@@ -1,4 +1,4 @@
-import { Action } from '@/types/hooks/UseNav';
+import { Action } from '@/types/hooks/UseNav/UseNav';
 import { Dispatch } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
 

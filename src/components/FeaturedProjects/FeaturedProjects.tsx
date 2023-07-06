@@ -3,7 +3,6 @@ import { SectionHeading } from '@components/UI/SectionHeading';
 import { FeaturedProject } from './FeaturedProject/FeaturedProject';
 import { FaStrava } from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiHtml5 } from 'react-icons/si';
-import { ProjectDetailsProvider } from '@/contexts/ProjectDetailsContext/ProjectDetailsProvider';
 
 const FEATURED_PROJECTS = [
     {
@@ -34,11 +33,9 @@ export const FeaturedProjects = () => {
         <section className="mt-20">
             <SectionHeading text={t('Featured Projects')} />
             <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
-                <ProjectDetailsProvider>
                     {FEATURED_PROJECTS.map(prjDetails => (
                         <FeaturedProject key={prjDetails.name} {...prjDetails} />
                     ))}
-                </ProjectDetailsProvider>
             </ul>
         </section>
     );

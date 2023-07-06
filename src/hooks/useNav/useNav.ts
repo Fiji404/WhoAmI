@@ -1,4 +1,4 @@
-import { Action } from '@/types/hooks/UseNav';
+import { Action } from '@/types/hooks/UseNav/UseNav';
 import { useReducer } from 'react';
 
 const INITIAL_NAV_STATE = {

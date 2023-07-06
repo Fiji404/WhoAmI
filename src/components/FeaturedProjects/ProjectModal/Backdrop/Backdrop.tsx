@@ -6,12 +6,21 @@ interface Props {
 }
 
 export const Backdrop = ({ name }: Props) => {
-    const { closeProjectDetailsHandler } = useContext(ProjectDetailsContext);
+    const {
+        isProjectPreviewImageOpen,
+        toggleProjectPreviewImageVisibility,
+        toggleProjectModalVisibility
+    } = useContext(ProjectDetailsContext);
     return (
         <div
-            onClick={() => closeProjectDetailsHandler(name)}
+            onClick={() => {
+                if (isProjectPreviewImageOpen) return toggleProjectPreviewImageVisibility();
+                toggleProjectModalVisibility(name);
+            }}
             aria-hidden="true"
-            className="z-10 fixed inset-0 bg-[rgba(15,15,15,0.87)]"
+            className={`fixed inset-0 bg-[rgba(15,15,15,0.87)] ${
+                isProjectPreviewImageOpen ? 'z-[15]' : 'z-10'
+            }`}
         ></div>
     );
 };

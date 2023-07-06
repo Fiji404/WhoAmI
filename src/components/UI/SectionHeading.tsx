@@ -1,6 +1,5 @@
-import { LangContext } from '@/contexts/LangContext/langContext';
-import { Variants, motion } from 'framer-motion';
-import { Fragment, useContext, useEffect, useState } from 'react';
+import { Variants, motion, useInView } from 'framer-motion';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 interface Props {
     text: string;
@@ -42,16 +41,17 @@ const AnimatedLetter = ({ letter }: { letter: string }) => {
 };
 
 export const SectionHeading = ({ text, styles }: Props) => {
-    const { lang } = useContext(LangContext);
-    const [langSnapshot, setLangSnapshot] = useState<string | false>(false);
+    const [isAnimationPlayed, setIsAnimationPlayed] = useState(false);
+    const sectionHeadingRef = useRef(null);
+    const isHeadingInView = useInView(sectionHeadingRef);
 
     useEffect(() => {
-        setLangSnapshot(lang);
-    }, [lang]);
+        if (isHeadingInView) setIsAnimationPlayed(true);
+    }, [isHeadingInView]);
 
     const animatedText = text.split(' ').map(word => (
         <Fragment key={word}>
-            <span style={{ whiteSpace: 'nowrap' }}> 
+            <span style={{ whiteSpace: 'nowrap' }}>
                 {word.split('').map((letter, i) => (
                     <AnimatedLetter key={i} letter={letter} />
                 ))}
@@ -62,9 +62,9 @@ export const SectionHeading = ({ text, styles }: Props) => {
 
     return (
         <motion.h2
-            initial={!langSnapshot && 'hidden'}
+            ref={sectionHeadingRef}
+            initial={!isAnimationPlayed && 'hidden'}
             whileInView="visible"
-            // animate={!langSnapshot && 'show'}
             viewport={{ once: true }}
             variants={variants}
             className={styles ? styles : 'sub-heading'}

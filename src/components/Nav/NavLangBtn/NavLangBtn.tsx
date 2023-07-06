@@ -1,4 +1,4 @@
-import { Action } from '@/types/hooks/UseNav';
+import { Action } from '@/types/hooks/UseNav/UseNav';
 import { NavLangList } from '../NavLangList/NavLangList';
 import { IoLanguage } from 'react-icons/io5';
 import { Dispatch } from 'react';

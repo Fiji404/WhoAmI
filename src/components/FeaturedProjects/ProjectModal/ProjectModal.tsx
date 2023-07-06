@@ -5,7 +5,7 @@ import { ProjectDesc } from './ProjectDesc/ProjectDesc';
 import { FeaturedProjectStack } from '../FeaturedProject/FeaturedProjectStack/FeaturedProjectStack';
 import { ProjectFeatures } from './ProjectFeatures/ProjectFeatures';
 import { ProjectPreviewLinks } from './ProjectLinks/ProjectLinks';
-import { BsStack } from 'react-icons/bs';
+import { RiStackFill } from 'react-icons/ri';
 import { ProjectPreviewImages } from './ProjectPreviewImages/ProjectPreviewImages';
 
 interface Props {
@@ -26,11 +26,11 @@ export const ProjectModal = ({ name, techList }: Props) => {
                     <div className="px-4 pb-3 max-h-full h-[65vh] overflow-y-auto">
                         <ProjectDesc name={name} />
                         <h2 className="flex gap-2 items-center my-4 text-[#fff] text-3xl font-semibold">
-                            Used stack <BsStack color="#2dc284" />
+                            Tech stack <RiStackFill className='text-[#df4a45]' />
                         </h2>
                         <FeaturedProjectStack techList={techList} />
                         <ProjectFeatures name={name} />
-                        <ProjectPreviewImages />
+                        <ProjectPreviewImages  />
                         <ProjectPreviewLinks name={name} />
                     </div>
                 </motion.section>

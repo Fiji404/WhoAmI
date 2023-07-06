@@ -1,4 +1,5 @@
 import { useForm } from '@/hooks/useForm/useForm';
+import { FormActionTypes } from '@/types/hooks/UseForm/useForm';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -22,11 +23,12 @@ export const FormControls = ({ framerAnimations }: Props) => {
     const { dispatch } = useForm();
     return (
         <>
-            {FORM_CONTROLS.map(({ Element, placeholder, classes }) => (
+            {FORM_CONTROLS.map(({ Element, placeholder, classes, actionType }) => (
                 <Element
+                    key={placeholder}
                     {...framerAnimations}
                     className={`input ${classes ? classes : ''}`}
-                    onChange={e => dispatch({ type: 'EMAIL_TEXT', value: e.target.value })}
+                    onChange={e => dispatch({ type: actionType as FormActionTypes, value: e.target.value })}
                     placeholder={t(placeholder)!}
                     viewport={{ once: true }}
                 />

@@ -96,6 +96,6 @@
         @apply w-full inline-block text-center;
     }
     .project-link {
-        @apply text-white flex items-center justify-center rounded-md gap-2 py-5 px-4 bg-[#141414] border border-[#2b2b2b] text-2xl hover:bg-[#1b1b1b] transition-colors;
+        @apply text-white flex items-center justify-center rounded-md gap-2 py-5 px-4 bg-[#131313cc] border border-[#202020] text-2xl hover:bg-[#161616] transition-colors;
     }
 }
