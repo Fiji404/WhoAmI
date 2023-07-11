@@ -1,4 +1,4 @@
-import { FormActionTypes } from '@/types/hooks/UseForm/useForm';
+import { FormActionTypes } from '@/types/hooks/UseForm/UseForm';
 import { useReducer } from 'react';
 
 type FormData = typeof INITIAL_FORM_DATA;

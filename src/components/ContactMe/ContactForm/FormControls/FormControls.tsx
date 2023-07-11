@@ -1,5 +1,5 @@
 import { useForm } from '@/hooks/useForm/useForm';
-import { FormActionTypes } from '@/types/hooks/UseForm/useForm';
+import { FormActionTypes } from '@/types/hooks/UseForm/UseForm';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 

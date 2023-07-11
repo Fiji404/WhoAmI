@@ -15,16 +15,18 @@ export const App = () => {
     const { isProjectModalOpen } = useContext(ProjectDetailsContext);
     const isAnyProjectModalOpen = Object.values(isProjectModalOpen).includes(true);
     return (
-        <div className={`${isAnyProjectModalOpen ? 'h-full overflow-hidden' : ''}`}>
-            <ParticlesBg />
-            <LangProvider>
-                <Nav />
-                <WelcomeHeader />
-                <AboutMe />
-                <FeaturedProjects />
-                <ContactMe />
-                <Footer />
-            </LangProvider>
-        </div>
+        <>
+            <div className={`${isAnyProjectModalOpen ? 'h-full overflow-hidden' : ''}`}>
+                <ParticlesBg />
+                <LangProvider>
+                    <Nav />
+                    <WelcomeHeader />
+                    <AboutMe />
+                    <FeaturedProjects />
+                    <ContactMe />
+                    <Footer />
+                </LangProvider>
+            </div>
+        </>
     );
 };
