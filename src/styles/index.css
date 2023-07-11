@@ -98,4 +98,16 @@
     .project-link {
         @apply text-white flex items-center justify-center rounded-md gap-2 py-5 px-4 bg-[#131313cc] border border-[#202020] text-2xl hover:bg-[#161616] transition-colors;
     }
+    .scroll-disabled {
+        @apply overflow-hidden;
+    }
+    /* .xd::after{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+    } */
 }

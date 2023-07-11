@@ -25,7 +25,7 @@ export const FeaturedProject = ({ name, description, techList }: Props) => {
                 initial={{ opacity: 0.7, translateY: '50%' }}
                 whileInView={{ opacity: 1, translateY: 0 }}
                 viewport={{ once: true }}
-                className="grow p-4 bg-[rgba(19,19,19,0.9)] border border-accent rounded-md max-w-[550px] relative overflow-hidden"
+                className="grow p-4 bg-[rgba(19,19,19,0.9)] border border-accent rounded-md max-w-[550px] relative isolate overflow-hidden"
             >
                 <h2 className="text-white font-semibold text-center text-4xl rounded-md">{name}</h2>
                 <p className="mt-5 mb-3 text-center text-lg text-[#a0a0a0]">{t(description)}</p>

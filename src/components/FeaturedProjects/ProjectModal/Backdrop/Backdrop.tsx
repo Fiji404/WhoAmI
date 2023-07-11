@@ -18,8 +18,8 @@ export const Backdrop = ({ name }: Props) => {
                 toggleProjectModalVisibility(name);
             }}
             aria-hidden="true"
-            className={`fixed inset-0 bg-[rgba(15,15,15,0.87)] ${
-                isProjectPreviewImageOpen ? 'z-[15]' : 'z-10'
+            className={`fixed isolate inset-0 bg-[rgba(15,15,15,0.87)] ${
+                isProjectPreviewImageOpen ? 'z-[10]' : 'z-10'
             }`}
         ></div>
     );

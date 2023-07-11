@@ -14,19 +14,19 @@ import { ProjectDetailsContext } from './contexts/ProjectDetailsContext/ProjectD
 export const App = () => {
     const { isProjectModalOpen } = useContext(ProjectDetailsContext);
     const isAnyProjectModalOpen = Object.values(isProjectModalOpen).includes(true);
+    if (isAnyProjectModalOpen) document.body.classList.add('scroll-disabled');
+    else document.body.classList.remove('scroll-disabled')
     return (
         <>
-            <div className={`${isAnyProjectModalOpen ? 'h-full overflow-hidden' : ''}`}>
-                <ParticlesBg />
-                <LangProvider>
-                    <Nav />
-                    <WelcomeHeader />
-                    <AboutMe />
-                    <FeaturedProjects />
-                    <ContactMe />
-                    <Footer />
-                </LangProvider>
-            </div>
+            <ParticlesBg />
+            <LangProvider>
+                <Nav />
+                <WelcomeHeader />
+                <AboutMe />
+                <FeaturedProjects />
+                <ContactMe />
+                <Footer />
+            </LangProvider>
         </>
     );
 };

@@ -7,6 +7,7 @@ import { ProjectFeatures } from './ProjectFeatures/ProjectFeatures';
 import { ProjectPreviewLinks } from './ProjectLinks/ProjectLinks';
 import { RiStackFill } from 'react-icons/ri';
 import { ProjectPreviewImages } from './ProjectPreviewImages/ProjectPreviewImages';
+import { createPortal } from 'react-dom';
 
 interface Props {
     name: string;
@@ -16,7 +17,7 @@ interface Props {
 export const ProjectModal = ({ name, techList }: Props) => {
     return (
         <>
-            <Backdrop name={name} />
+            {createPortal(<Backdrop name={name} />, document.body)}
             <div className="flex flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-10 border border-accent rounded-md bg-[#111]">
                 <motion.section
                     initial={{ opacity: 0.75, translateY: '50%' }}
@@ -26,11 +27,11 @@ export const ProjectModal = ({ name, techList }: Props) => {
                     <div className="px-4 pb-3 max-h-full h-[65vh] overflow-y-auto">
                         <ProjectDesc name={name} />
                         <h2 className="flex gap-2 items-center my-4 text-[#fff] text-3xl font-semibold">
-                            Tech stack <RiStackFill className='text-[#df4a45]' />
+                            Tech stack <RiStackFill className="text-[#df4a45]" />
                         </h2>
                         <FeaturedProjectStack techList={techList} />
                         <ProjectFeatures name={name} />
-                        <ProjectPreviewImages  />
+                        <ProjectPreviewImages />
                         <ProjectPreviewLinks name={name} />
                     </div>
                 </motion.section>
