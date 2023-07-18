@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@config '../../tailwind.config.ts';
 
 @layer base {
     html {
@@ -101,13 +102,4 @@
     .scroll-disabled {
         @apply overflow-hidden;
     }
-    /* .xd::after{
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: red;
-    } */
 }

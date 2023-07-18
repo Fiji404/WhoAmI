@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./index.html', './src/**/*.{ts,tsx}'],
+    content: ['./src/**/*.tsx'],
     theme: {
         extend: {
             fontFamily: {
@@ -17,7 +16,6 @@ module.exports = {
         screens: {
             smMax: { max: '530px' },
             smMin: { min: '530px' },
-
             md: { max: '1110px' }
         }
     },
