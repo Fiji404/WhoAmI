@@ -6,7 +6,7 @@ type ProjectNames = 'Quick Tips' | 'Flaggy';
 export const ProjectDetailsProvider = ({ children }: PropsWithChildren) => {
     const [isProjectModalOpen, setIsProjectModalOpen] = useState({
         'Quick Tips': false,
-        'Flaggy': false
+        Flaggy: false
     });
     const [isProjectPreviewImageOpen, setIsProjectPreviewImageOpen] = useState(false);
 

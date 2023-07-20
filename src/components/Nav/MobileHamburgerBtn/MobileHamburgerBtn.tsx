@@ -1,9 +1,9 @@
-import { Action } from '@/types/hooks/UseNav/UseNav';
+import { NavActions } from '@/types/hooks/UseNav/UseNav';
 import { Dispatch } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
 
 interface Props {
-    navDispatch: Dispatch<Action>;
+    navDispatch: Dispatch<NavActions>;
 }
 
 export const MobileHamburgerBtn = ({ navDispatch }: Props) => {

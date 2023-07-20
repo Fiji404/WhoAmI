@@ -1,10 +1,10 @@
-import { Action } from '@/types/hooks/UseNav/UseNav';
+import { NavActions } from '@/types/hooks/UseNav/UseNav';
 import { NavLangList } from '../NavLangList/NavLangList';
 import { IoLanguage } from 'react-icons/io5';
 import { Dispatch } from 'react';
 
 interface Props {
-    navDispatch: Dispatch<Action>;
+    navDispatch: Dispatch<NavActions>;
     isLangListActive: boolean;
 }
 
