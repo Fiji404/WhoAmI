@@ -8,7 +8,7 @@ const FEATURED_PROJECTS = [
     {
         prjName: 'Quick Tips',
         description:
-            'This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.',
+            'This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration. All tips is stored in public so any user can view and edit every tip.',
         techStackList: [
             { langName: 'HTML5', langIcon: <SiHtml5 /> },
             { langName: 'TailwindCSS', langIcon: <SiTailwindcss /> },

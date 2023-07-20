@@ -11,8 +11,8 @@ const PROJECT_PREVIEW_LINKS: Record<string, LinkDetails> = {
         siteURL: 'https://quicktips4you.xyz/'
     },
     Flaggy: {
-        repoURL: 'https://github.com/Fiji404/MyTodos.git',
-        siteURL: 'https://mytodos.ink/'
+        repoURL: 'https://github.com/Fiji404/Flaggy.git',
+        siteURL: 'https://flaggygame.netlify.app/'
     }
 };
 

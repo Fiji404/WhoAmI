@@ -16,7 +16,7 @@ export const Backdrop = ({ prjName }: Props) => {
         <div
             onClick={backdropClickHandler}
             aria-hidden="true"
-            className={`fixed inset-0 bg-[rgba(15,15,15,0.87)]`}
+            className={`fixed inset-0 bg-[rgba(15,15,15,0.87)] z-10`}
         ></div>
     );
 };

@@ -42,7 +42,7 @@ const ABOUT_ME_INFO = [
     {
         title: 'Description',
         content:
-            'I am an eighteen-year-old boy from Poland who is interested in programming. I have been fascinated by technology and the way the internet works from a young age. Soon, I began to learn the ins and outs of programming, and I am currently developing my skills in this area. My passion is developing web applications and improving their functionality. I always try to learn new technologies and tools to create better and more innovative solutions. I want to develop my programming skills to work as a programmer in the future and contribute to the development of the IT industry.'
+            'I am an nineteen year old boy from Poland who is interested in programming. I have been fascinated by technology and the way the internet works from a young age. Soon, I began to learn the ins and outs of programming, and I am currently developing my skills in this area. My passion is developing web applications and improving their functionality. I always try to learn new technologies and tools to create better and more innovative solutions. I want to develop my programming skills to work as a programmer in the future and contribute to the development of the IT industry.'
     },
     {
         title: 'My career',

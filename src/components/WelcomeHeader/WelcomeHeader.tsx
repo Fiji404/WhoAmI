@@ -12,7 +12,7 @@ export const WelcomeHeader = () => {
                 <div className="flex flex-col items-center justify-center h-full py-7">
                     <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
                         <SectionHeading
-                            styles="heading"
+                            styles="heading smMax:mb-4"
                             text={t("I'm a thriving frontend developer")}
                         />
                         <WelcomeHeaderAvatar />

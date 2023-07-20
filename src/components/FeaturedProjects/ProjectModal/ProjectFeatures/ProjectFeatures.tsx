@@ -7,11 +7,7 @@ const PROJECTS_FEATURES: Record<string, string[]> = {
         'View and edit tip',
         'Selecting between dark/light theme'
     ],
-    'Flaggy': [
-        'Adding/removing and marking as completed options for items',
-        'User can choose between light/dark mode',
-        'Option for re-ordering items'
-    ]
+    Flaggy: ['User can choose between light/dark theme', 'Player have 4 modes to play']
 };
 
 interface Props {
