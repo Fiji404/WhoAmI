@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BiGitRepoForked } from 'react-icons/bi';
 import { HiOutlineStatusOnline } from 'react-icons/hi';
 
@@ -7,14 +8,16 @@ interface Props {
 }
 
 export const ProjectLinkItem = ({ href, URLType }: Props) => {
+    const { t } = useTranslation();
+
     const linkText =
         URLType === 'repoURL' ? (
             <>
-                Repository <BiGitRepoForked className="text-3xl text-[#E84D31]" />
+                {t('Repository')} <BiGitRepoForked className="text-3xl text-[#E84D31]" />
             </>
         ) : (
             <>
-                Site <HiOutlineStatusOnline className="text-3xl text-[#9000ff]" />
+                {t('Site')} <HiOutlineStatusOnline className="text-3xl text-[#9000ff]" />
             </>
         );
     return (

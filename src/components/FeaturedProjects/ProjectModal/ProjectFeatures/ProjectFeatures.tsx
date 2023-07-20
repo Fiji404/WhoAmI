@@ -1,5 +1,6 @@
 import { BsListCheck } from 'react-icons/bs';
 import { ProjectFeature } from './ProjectFeature/ProjectFeature';
+import { useTranslation } from 'react-i18next';
 
 const PROJECTS_FEATURES: Record<string, string[]> = {
     'Quick Tips': [
@@ -15,10 +16,11 @@ interface Props {
 }
 
 export const ProjectFeatures = ({ prjName }: Props) => {
+    const { t } = useTranslation();
     return (
         <>
             <h2 className="flex items-center gap-2 my-4 text-white text-3xl font-semibold">
-                Features <BsListCheck className=" text-[#df4a45]" />
+                {t('Features')} <BsListCheck className=" text-[#df4a45]" />
             </h2>
             <ol className="pl-8">
                 {PROJECTS_FEATURES[prjName].map(featureName => (

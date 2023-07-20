@@ -1,8 +1,6 @@
-# Fiji404 portfolio website
+# Fiji404 portfolio
 
-## Overview
-
-This project is about personal portfolio website to showcase my skills, experience, and projects.
+Discover the artistry of my web development and design skills through an elegant and captivating online showcase.
 
 ## Tech Stack
 
@@ -11,11 +9,11 @@ This project is about personal portfolio website to showcase my skills, experien
 -   TailwindCSS
 -   Framer Motion
 
-## Preview
+## Screenshots
 
-![Landing page screenshot](https://github.com/Fiji404/WhoAmI/blob/master/public/landing-page-preview.png)
-![Project description modal preview](https://github.com/Fiji404/WhoAmI/blob/master/public/project-desc-preview.png)
+![Landing page screenshot](https://github.com/Fiji404/WhoAmI/blob/master/public/screenshots/landing-page.png)
+![Project description modal preview](https://github.com/Fiji404/WhoAmI/blob/master/public/screenshots/project-modal.png)
 
-## Live preview
+## Demo
 
-[Fiji404](https://fiji404.pro/)
+[Fiji404.pro](https://fiji404.pro/)
