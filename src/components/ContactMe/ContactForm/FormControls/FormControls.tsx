@@ -1,6 +1,6 @@
 import { useForm } from '@/hooks/useForm/useForm';
 import { FormActionTypes } from '@/types/hooks/UseForm/UseForm';
-import { motion } from 'framer-motion';
+import { motion, MotionStyle } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const FORM_CONTROLS = [
@@ -15,7 +15,7 @@ const FORM_CONTROLS = [
 ];
 
 interface Props {
-    framerAnimations: Record<string, object>;
+    framerAnimations: Record<string, MotionStyle>;
 }
 
 export const FormControls = ({ framerAnimations }: Props) => {
@@ -28,7 +28,9 @@ export const FormControls = ({ framerAnimations }: Props) => {
                     key={placeholder}
                     {...framerAnimations}
                     className={`input ${classes ? classes : ''}`}
-                    onChange={e => dispatch({ type: actionType as FormActionTypes, value: e.target.value })}
+                    onChange={e =>
+                        dispatch({ type: actionType as FormActionTypes, value: e.target.value })
+                    }
                     placeholder={t(placeholder)!}
                     viewport={{ once: true }}
                 />

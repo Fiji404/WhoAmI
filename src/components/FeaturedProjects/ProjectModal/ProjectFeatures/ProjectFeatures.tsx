@@ -7,7 +7,7 @@ const PROJECTS_FEATURES: Record<string, string[]> = {
         'View and edit tip',
         'Selecting between dark/light theme'
     ],
-    'My Todos': [
+    'Flaggy': [
         'Adding/removing and marking as completed options for items',
         'User can choose between light/dark mode',
         'Option for re-ordering items'
@@ -15,17 +15,17 @@ const PROJECTS_FEATURES: Record<string, string[]> = {
 };
 
 interface Props {
-    name: string;
+    prjName: string;
 }
 
-export const ProjectFeatures = ({ name }: Props) => {
+export const ProjectFeatures = ({ prjName }: Props) => {
     return (
         <>
-            <h2 className="flex items-center gap-2 my-4 text-[#fff] text-3xl font-semibold">
+            <h2 className="flex items-center gap-2 my-4 text-white text-3xl font-semibold">
                 Features <BsListCheck className=" text-[#df4a45]" />
             </h2>
             <ol className="pl-8">
-                {PROJECTS_FEATURES[name].map(featureName => (
+                {PROJECTS_FEATURES[prjName].map(featureName => (
                     <ProjectFeature key={featureName} featureName={featureName} />
                 ))}
             </ol>

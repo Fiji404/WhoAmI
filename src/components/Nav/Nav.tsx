@@ -10,7 +10,7 @@ export const Nav = () => {
         <motion.nav
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="bg-[rgba(19,19,19,0.97)] py-3 px-5 border-b border-b-accent sticky top-0 w-full z-10  flex items-center justify-between flex-wrap"
+            className="bg-[rgba(19,19,19,0.97)] py-3 px-5 border-b border-b-accent sticky top-0 w-full z-10 flex items-center justify-between flex-wrap"
         >
             <NavLogo />
             <div className="flex items-center gap-2 relative">

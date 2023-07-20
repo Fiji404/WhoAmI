@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { motion, AnimationOptions } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useForm } from '@/hooks/useForm/useForm';
 import { FormControls } from './FormControls/FormControls';
 

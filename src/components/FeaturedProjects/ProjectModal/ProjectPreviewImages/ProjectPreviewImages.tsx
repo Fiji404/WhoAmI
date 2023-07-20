@@ -2,10 +2,10 @@ import { BsFillImageFill } from 'react-icons/bs';
 import { ProjectPreviewImage } from './ProjectPreviewImage/ProjectPreviewImage';
 import { useContext } from 'react';
 import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
-import quickTipsDesktopImg from '@/assets/quick-tips-desktop.png';
-import quickTipsMobileImg from '@/assets/quick-tips-mobile.png';
-import myTodosDesktopImg from '@/assets/my-todos-desktop.png';
-import myTodosMobileImg from '@/assets/my-todos-mobile.png';
+import quickTipsDesktopImg from '@/assets/screenshots/quick-tips/quick-tips-desktop.png';
+import quickTipsMobileImg from '@/assets/screenshots/quick-tips/quick-tips-mobile.png';
+import flaggyLandingPage from '@/assets/screenshots/flaggy/landing-page.png';
+import flaggyGameScreen from '@/assets/screenshots/flaggy/game.png';
 
 const PREVIEW_IMAGES_PATHS = {
     'Quick Tips': [
@@ -20,11 +20,11 @@ const PREVIEW_IMAGES_PATHS = {
     ],
     'My Todos': [
         {
-            path: myTodosDesktopImg,
+            path: flaggyLandingPage,
             desc: 'Represents desktop view of my todos app'
         },
         {
-            path: myTodosMobileImg,
+            path: flaggyGameScreen,
             desc: 'Represents mobile view of my todos app'
         }
     ]

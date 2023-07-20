@@ -1,4 +1,4 @@
-import { Action } from '@/types/hooks/UseNav/UseNav';
+import { NavActions } from '@/types/hooks/UseNav/UseNav';
 import { useReducer } from 'react';
 
 const INITIAL_NAV_STATE = {
@@ -8,7 +8,7 @@ const INITIAL_NAV_STATE = {
 
 type InitialNavState = typeof INITIAL_NAV_STATE;
 
-export const navReducer = (state: InitialNavState, action: Action): InitialNavState => {
+export const navReducer = (state: InitialNavState, action: NavActions): InitialNavState => {
     if (action.type === 'MOBILE_NAV_TOGGLE') {
         return { isLangListActive: false, isMobileNavActive: !state.isMobileNavActive };
     }

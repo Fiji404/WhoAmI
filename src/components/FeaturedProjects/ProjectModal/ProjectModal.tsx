@@ -1,38 +1,40 @@
 import { motion } from 'framer-motion';
-import { Backdrop } from './Backdrop/Backdrop';
-import { ProjectHeader } from './ProjectHeader/ProjectHeader';
-import { ProjectDesc } from './ProjectDesc/ProjectDesc';
-import { FeaturedProjectStack } from '../FeaturedProject/FeaturedProjectStack/FeaturedProjectStack';
-import { ProjectFeatures } from './ProjectFeatures/ProjectFeatures';
-import { ProjectPreviewLinks } from './ProjectLinks/ProjectLinks';
+import {
+    Backdrop,
+    ProjectHeader,
+    ProjectDesc,
+    ProjectFeatures,
+    ProjectPreviewLinks,
+    ProjectPreviewImages
+} from './';
+import { TechStackItem, TechStackList } from '@/components/UI/TechStackList/TechStackList';
 import { RiStackFill } from 'react-icons/ri';
-import { ProjectPreviewImages } from './ProjectPreviewImages/ProjectPreviewImages';
 import { createPortal } from 'react-dom';
 
 interface Props {
-    name: string;
-    techList: { lang: string; langIcon: React.ReactNode }[];
+    prjName: string;
+    techStackList: TechStackItem[];
 }
 
-export const ProjectModal = ({ name, techList }: Props) => {
+export const ProjectModal = ({ prjName, techStackList }: Props) => {
     return (
         <>
-            {createPortal(<Backdrop name={name} />, document.body)}
+            {createPortal(<Backdrop prjName={prjName} />, document.body)}
             <div className="flex flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-10 border border-accent rounded-md bg-[#111]">
                 <motion.section
                     initial={{ opacity: 0.75, translateY: '50%' }}
                     animate={{ opacity: 1, translateY: 0 }}
                 >
-                    <ProjectHeader name={name} />
-                    <div className="px-4 pb-3 max-h-full h-[65vh] overflow-y-auto">
-                        <ProjectDesc name={name} />
-                        <h2 className="flex gap-2 items-center my-4 text-[#fff] text-3xl font-semibold">
+                    <ProjectHeader prjName={prjName} />
+                    <div className="px-4 pb-3 max-h-[65vh] overflow-y-auto">
+                        <ProjectDesc prjName={prjName} />
+                        <h2 className="flex gap-2 items-center my-4 text-white text-3xl font-semibold">
                             Tech stack <RiStackFill className="text-[#df4a45]" />
                         </h2>
-                        <FeaturedProjectStack techList={techList} />
-                        <ProjectFeatures name={name} />
+                        <TechStackList techStackList={techStackList} />
+                        <ProjectFeatures prjName={prjName} />
                         <ProjectPreviewImages />
-                        <ProjectPreviewLinks name={name} />
+                        <ProjectPreviewLinks prjName={prjName} />
                     </div>
                 </motion.section>
             </div>

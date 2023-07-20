@@ -1,5 +1,5 @@
 import { SiDiscord, SiGithub } from 'react-icons/si';
-import { FaRedditAlien } from 'react-icons/fa';
+import { AiFillLinkedin } from 'react-icons/ai';
 import { FooterSocialItem } from './FooterSocialItem/FooterSocialItem';
 
 const SOCIALS_LIST = [
@@ -9,9 +9,9 @@ const SOCIALS_LIST = [
         URL: 'https://discord.gg/cZcKm7DdzD'
     },
     {
-        socialName: 'Reddit',
-        socialIcon: <FaRedditAlien className="text-2xl text-[#FF5414]" />,
-        URL: 'https://www.reddit.com/user/Fiji990'
+        socialName: 'LinkedIn',
+        socialIcon: <AiFillLinkedin className="text-3xl text-[#0a66c2]" />,
+        URL: 'https://www.linkedin.com/in/rados%C5%82aw-rostek-916546242/'
     },
     {
         socialName: 'Github',

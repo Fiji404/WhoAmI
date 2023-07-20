@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 const isProjectModalOpen: Record<string, boolean> = {
     'Quick Tips': false,
-    'My Todos': false
+    'Flaggy': false
 };
 
 export const ProjectDetailsContext = createContext({

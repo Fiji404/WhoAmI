@@ -1,28 +1,28 @@
 import { useTranslation } from 'react-i18next';
-import { SectionHeading } from '@components/UI/SectionHeading';
+import { SectionHeading } from '@components/index';
 import { FeaturedProject } from './FeaturedProject/FeaturedProject';
-import { FaStrava } from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiHtml5 } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
 
 const FEATURED_PROJECTS = [
     {
-        name: 'Quick Tips',
+        prjName: 'Quick Tips',
         description:
             'This is my first application from I started learning web development. It was intended for creating and sharing valuable frontend tips by users of the platform. Users can add our own tips by doing registration.',
-            techList: [
-            { lang: 'HTML', langIcon: <SiHtml5 /> },
-            { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
-            { lang: 'TypeScript', langIcon: <SiTypescript /> }
+        techStackList: [
+            { langName: 'HTML5', langIcon: <SiHtml5 /> },
+            { langName: 'TailwindCSS', langIcon: <SiTailwindcss /> },
+            { langName: 'TypeScript', langIcon: <SiTypescript /> }
         ]
     },
     {
-        name: 'My Todos',
+        prjName: 'Flaggy',
         description:
-            'My todos is a simple and straightforward online task management tool that allows users to create and organize their to-do lists. The website has a clean and minimalistic design, making it easy to use and navigate.',
-            techList: [
-            { lang: 'Astro', langIcon: <FaStrava /> },
-            { lang: 'TailwindCSS', langIcon: <SiTailwindcss /> },
-            { lang: 'TypeScript', langIcon: <SiTypescript /> }
+            'Flaggy is an educational app designed to test your knowledge and recognition of flags from around the world. The core objective of Flaggy is simple yet challenging: guess the flag based on the displayed image. The app offers four modes for different preferences and skill levels.',
+        techStackList: [
+            { langName: 'React', langIcon: <FaReact /> },
+            { langName: 'TailwindCSS', langIcon: <SiTailwindcss /> },
+            { langName: 'TypeScript', langIcon: <SiTypescript /> }
         ]
     }
 ];
@@ -33,9 +33,9 @@ export const FeaturedProjects = () => {
         <section className="mt-20">
             <SectionHeading text={t('Featured Projects')} />
             <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
-                    {FEATURED_PROJECTS.map(prjDetails => (
-                        <FeaturedProject key={prjDetails.name} {...prjDetails} />
-                    ))}
+                {FEATURED_PROJECTS.map(prjDetails => (
+                    <FeaturedProject key={prjDetails.prjName} {...prjDetails} />
+                ))}
             </ul>
         </section>
     );

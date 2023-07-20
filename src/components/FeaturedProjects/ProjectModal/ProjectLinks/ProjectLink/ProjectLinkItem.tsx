@@ -2,13 +2,13 @@ import { BiGitRepoForked } from 'react-icons/bi';
 import { HiOutlineStatusOnline } from 'react-icons/hi';
 
 interface Props {
-    URLName: string;
+    URLType: string;
     href: string;
 }
 
-export const ProjectLinkItem = ({ href, URLName }: Props) => {
+export const ProjectLinkItem = ({ href, URLType }: Props) => {
     const linkText =
-        URLName === 'repoURL' ? (
+        URLType === 'repoURL' ? (
             <>
                 Repository <BiGitRepoForked className="text-3xl text-[#E84D31]" />
             </>

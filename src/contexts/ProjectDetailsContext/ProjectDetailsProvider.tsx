@@ -1,12 +1,12 @@
 import { PropsWithChildren, useState } from 'react';
 import { ProjectDetailsContext } from './ProjectDetailsContext';
 
-type ProjectNames = 'Quick Tips' | 'My Todos';
+type ProjectNames = 'Quick Tips' | 'Flaggy';
 
 export const ProjectDetailsProvider = ({ children }: PropsWithChildren) => {
     const [isProjectModalOpen, setIsProjectModalOpen] = useState({
         'Quick Tips': false,
-        'My Todos': false
+        'Flaggy': false
     });
     const [isProjectPreviewImageOpen, setIsProjectPreviewImageOpen] = useState(false);
 

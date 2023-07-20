@@ -1,4 +1,4 @@
-import { SectionHeading } from '@components/UI/SectionHeading';
+import { SectionHeading } from '@components/index';
 import { useTranslation } from 'react-i18next';
 import { WelcomeHeaderArrow } from './WelcomeHeaderArrow/WelcomeHeaderArrow';
 import { WelcomeHeaderAvatar } from './WelcomeHeaderAvatar/WelcomeHeaderAvatar';

@@ -2,25 +2,21 @@ import { useContext } from 'react';
 import { ProjectDetailsContext } from '@/contexts/ProjectDetailsContext/ProjectDetailsContext';
 
 interface Props {
-    name: string;
+    prjName: string;
 }
 
-export const Backdrop = ({ name }: Props) => {
-    const {
-        isProjectPreviewImageOpen,
-        toggleProjectPreviewImageVisibility,
-        toggleProjectModalVisibility
-    } = useContext(ProjectDetailsContext);
+export const Backdrop = ({ prjName }: Props) => {
+    const { toggleProjectModalVisibility } = useContext(ProjectDetailsContext);
+
+    const backdropClickHandler = () => {
+        toggleProjectModalVisibility(prjName);
+    };
+
     return (
         <div
-            onClick={() => {
-                if (isProjectPreviewImageOpen) return toggleProjectPreviewImageVisibility();
-                toggleProjectModalVisibility(name);
-            }}
+            onClick={backdropClickHandler}
             aria-hidden="true"
-            className={`fixed isolate inset-0 bg-[rgba(15,15,15,0.87)] ${
-                isProjectPreviewImageOpen ? 'z-[10]' : 'z-10'
-            }`}
+            className={`fixed inset-0 bg-[rgba(15,15,15,0.87)]`}
         ></div>
     );
 };

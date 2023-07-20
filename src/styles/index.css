@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@config '../../tailwind.config.ts';
 
 @layer base {
     html {
@@ -53,8 +52,14 @@
         color: #61dafb;
     }
     .skill-item.astro:hover svg,
-    .skill-item.html:hover svg {
+    .skill-item.html5:hover svg {
         color: #ff5d01;
+    }
+    .skill-item.css3:hover svg {
+        color: #0097db;
+    }
+    .skill-item.javascript:hover svg {
+        color: #f7e018;
     }
     .skill-item.tailwindcss:hover svg {
         color: #38bdf8;
@@ -64,9 +69,6 @@
     }
     .skill-item.typescript:hover svg {
         color: #3178c6;
-    }
-    .container {
-        @apply w-[95%] max-w-[1500px] mx-auto;
     }
     .input {
         @apply bg-[rgba(21,21,21,0.9)] py-1 px-2 rounded-md border border-accent text-[#dfdfdf] text-xl min-h-[50px] outline-none focus:border-[#aaaaaa] transition-colors;

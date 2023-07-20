@@ -14,7 +14,7 @@ export const WelcomeHeaderAvatar = () => {
                 filter: 'drop-shadow(0 0 5px #9BDBDC)',
                 transition: { delay: 0 }
             }}
-            src="/reddit-avatar.png"
+            src="/avatar.png"
             alt="My reddit avatar"
             className="sm:max-w-[80%]"
         />
