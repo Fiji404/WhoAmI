@@ -1,6 +1,7 @@
 import { createContext } from 'react';
+import { LanguageOptions } from './LangProvider';
 
 export const LangContext = createContext({
     lang: 'en',
-    updateLang(e: React.MouseEvent) {}
+    updateLang(lang: LanguageOptions) {}
 });

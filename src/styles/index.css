@@ -25,7 +25,7 @@
         background-color: #2b2b2b;
     }
     *:focus {
-        @apply outline-2 outline-[#ffffff]
+        @apply outline-2 outline-[#ffffff];
     }
     .nav-item {
         @apply py-1 px-2 border border-accent rounded-[3px] bg-[#141414d3] hover:bg-[#1a1a1ade] font-medium cursor-pointer text-[#a0a0a0] hover:text-[#e9e8e8] whitespace-nowrap transition-colors;
@@ -43,7 +43,7 @@
         @apply flex gap-6 border border-accent px-3 py-4 rounded-md smMax:flex-col transition-colors;
     }
     .diagram-label {
-        @apply flex items-center justify-center text-white font-consolas text-center pl-1 relative w-full max-w-[130px] border-r px-5 border-[#202020] smMax:max-w-none smMax:border-r-0 smMax:border-b smMax:pb-3;
+        @apply flex items-center justify-center min-w-[120px] text-white font-consolas text-center pl-1 relative border-r px-5 border-[#202020] smMax:max-w-none smMax:border-r-0 smMax:border-b smMax:pb-3;
     }
     .diagram-desc {
         @apply flex items-center text-[#b4b4b4] font-consolas smMax:justify-center;
@@ -81,9 +81,8 @@
         @apply flex gap-2 justify-center items-center bg-[#161616] py-2 px-4 rounded-md border border-[#202020] text-[#dfdfdf] hover:bg-[#1b1b1b] hover:border-[#292929] text-xl transition-colors;
     }
     .heading {
-        width: min(95%, 600px);
         font-size: clamp(3rem, 3vw + 2rem, 5.5rem);
-        @apply font-heading text-white leading-tight md:w-full md:text-center;
+        @apply w-[95%] max-w-[600px] font-heading text-white leading-tight md:w-full md:text-center;
     }
     .sub-heading {
         font-size: clamp(2.6rem, 2vw + 1rem, 3rem);

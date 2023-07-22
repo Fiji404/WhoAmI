@@ -30,7 +30,7 @@ const FEATURED_PROJECTS = [
 export const FeaturedProjects = () => {
     const { t } = useTranslation();
     return (
-        <section className="mt-20">
+        <section id="projects" className="mt-20">
             <SectionHeading text={t('Featured Projects')} />
             <ul className="mt-10 flex flex-wrap justify-center gap-6 w-[95%] max-w-[1500px] mx-auto">
                 {FEATURED_PROJECTS.map(prjDetails => (

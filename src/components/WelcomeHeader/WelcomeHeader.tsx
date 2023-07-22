@@ -7,19 +7,17 @@ export const WelcomeHeader = () => {
     const { t } = useTranslation();
 
     return (
-        <>
-            <section className="max-w-[85%] h-[95vh] mx-auto">
-                <div className="flex flex-col items-center justify-center h-full py-7">
-                    <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
-                        <SectionHeading
-                            styles="heading smMax:mb-4"
-                            text={t("I'm a thriving frontend developer")}
-                        />
-                        <WelcomeHeaderAvatar />
-                    </div>
-                    <WelcomeHeaderArrow />
+        <section className="max-w-[85%] h-[95vh] mx-auto">
+            <div className="flex flex-col items-center justify-center h-full py-7">
+                <div className="flex justify-between flex-wrap w-full items-center h-full md:justify-center">
+                    <SectionHeading
+                        styles="heading smMax:mb-4"
+                        text={t("I'm a thriving frontend developer")}
+                    />
+                    <WelcomeHeaderAvatar />
                 </div>
-            </section>
-        </>
+                <WelcomeHeaderArrow />
+            </div>
+        </section>
     );
 };

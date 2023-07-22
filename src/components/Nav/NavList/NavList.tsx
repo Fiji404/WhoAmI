@@ -8,7 +8,7 @@ interface Props {
 
 const PAGE_LINKS = [
     { href: '#about', text: 'About me' },
-    { target: '_blank', href: 'https://github.com/Fiji404', text: 'Portfolio' },
+    { href: '#projects', text: 'Portfolio' },
     { href: '#contact', text: 'Contact me' }
 ];
 
@@ -20,8 +20,8 @@ export const NavList = ({ isMobileNavActive, className }: Props) => {
                 isMobileNavActive ? 'smMax:mobile-open w-full' : ''
             }`}
         >
-            {PAGE_LINKS.map(({ href, text, target }) => (
-                <NavItem key={text} text={t(text)} {...{ href, target }} />
+            {PAGE_LINKS.map(({ href, text }) => (
+                <NavItem key={text} text={t(text)} {...{ href }} />
             ))}
         </ul>
     );

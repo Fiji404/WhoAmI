@@ -16,7 +16,7 @@ export const AboutMeListItem = ({ title, content }: Props) => {
             transition={{ duration: 0.5 }}
             className="diagram-row grow bg-[rgba(19,19,19,0.9)]"
         >
-            <h2 className="diagram-label">{t(title)}</h2>
+            <h3 className="diagram-label">{t(title)}</h3>
             {typeof content === 'string' ? <p className="diagram-desc">{t(content)}</p> : content}
         </motion.li>
     );

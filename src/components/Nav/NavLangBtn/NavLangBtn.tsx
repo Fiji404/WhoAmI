@@ -18,7 +18,7 @@ export const NavLangBtn = ({ navDispatch, isLangListActive }: Props) => {
             >
                 <IoLanguage className="text-xl" />
             </button>
-            <NavLangList isLangListActive={isLangListActive} />
+            <NavLangList isLangListActive={isLangListActive} navDispatch={navDispatch} />
         </div>
     );
 };

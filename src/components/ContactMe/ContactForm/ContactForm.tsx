@@ -9,15 +9,18 @@ const FRAMER_ANIMATIONS = {
 };
 
 export const ContactMeForm = () => {
-    const { formData } = useForm();
+    const { dispatch, formData } = useForm();
 
     const { t } = useTranslation();
     return (
-        <form className="mt-10 flex justify-center flex-col gap-3 z-10 w-[90%] max-w-[500px]">
-            <FormControls framerAnimations={FRAMER_ANIMATIONS} />
+        <form
+            className="mt-10 flex justify-center flex-col gap-3 z-10 w-[90%] max-w-[500px]"
+        >
+            <FormControls dispatch={dispatch} framerAnimations={FRAMER_ANIMATIONS} />
             <motion.a
                 href={`mailto:fiji404.kontakt@gmail.com?subject=${formData.fullName} ${formData.emailSubject}&body=${formData.emailText}`}
                 {...FRAMER_ANIMATIONS}
+                target='_blank'
                 viewport={{ once: true }}
                 className="input flex items-center w-fit mx-auto px-10 text-[#979797] hover:text-white hover:border-[#313131] hover:bg-[#181818b2] transition-colors"
             >

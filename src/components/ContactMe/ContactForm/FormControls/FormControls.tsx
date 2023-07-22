@@ -1,6 +1,6 @@
-import { useForm } from '@/hooks/useForm/useForm';
 import { FormActionTypes } from '@/types/hooks/UseForm/UseForm';
 import { motion, MotionStyle } from 'framer-motion';
+import { Dispatch } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const FORM_CONTROLS = [
@@ -16,11 +16,11 @@ const FORM_CONTROLS = [
 
 interface Props {
     framerAnimations: Record<string, MotionStyle>;
+    dispatch: Dispatch<{ type: FormActionTypes; value: string }>;
 }
 
-export const FormControls = ({ framerAnimations }: Props) => {
+export const FormControls = ({ framerAnimations, dispatch }: Props) => {
     const { t } = useTranslation();
-    const { dispatch } = useForm();
     return (
         <>
             {FORM_CONTROLS.map(({ Element, placeholder, classes, actionType }) => (

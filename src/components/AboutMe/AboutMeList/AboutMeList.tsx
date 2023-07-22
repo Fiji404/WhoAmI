@@ -11,8 +11,8 @@ import {
 } from 'react-icons/si';
 
 const KNOWN_LANGUAGES = [
-    { langName: 'HTML5', langHomePage: 'https://beta.reactjs.org/', langIcon: <SiHtml5 /> },
-    { langName: 'CSS3', langHomePage: 'https://beta.reactjs.org/', langIcon: <SiCss3 /> },
+    { langName: 'HTML5', langHomePage: 'https://developer.mozilla.org/en-US/docs/Web/HTML', langIcon: <SiHtml5 /> },
+    { langName: 'CSS3', langHomePage: 'https://developer.mozilla.org/en-US/docs/Web/CSS', langIcon: <SiCss3 /> },
     {
         langName: 'TailwindCSS',
         langHomePage: 'https://tailwindcss.com/',
@@ -25,7 +25,7 @@ const KNOWN_LANGUAGES = [
     },
     {
         langName: 'JavaScript',
-        langHomePage: 'https://beta.reactjs.org/',
+        langHomePage: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         langIcon: <SiJavascript />
     },
     {

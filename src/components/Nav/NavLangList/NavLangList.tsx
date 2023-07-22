@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { NavLangListItem } from './NavLangListItem/NavLangListItem';
 import { LangContext } from '@/contexts/LangContext/langContext';
-import { useContext } from 'react';
+import { Dispatch, useContext } from 'react';
 import PLFlag from '/src/assets/pl.svg';
 import USAFlag from '/src/assets/usa.svg';
+import { NavActions } from '@/types/hooks/UseNav/UseNav';
 
 const APP_LANGUAGES = [
     {
@@ -20,10 +21,18 @@ const APP_LANGUAGES = [
 
 interface Props {
     isLangListActive: boolean;
+    navDispatch: Dispatch<NavActions>;
 }
 
-export const NavLangList = ({ isLangListActive }: Props) => {
+export const NavLangList = ({ isLangListActive, navDispatch }: Props) => {
     const { updateLang } = useContext(LangContext);
+
+    const changeLanguageHandler = ({ target }: React.MouseEvent) => {
+        if (!(target instanceof Element)) return;
+        const chosenLanguage = target.closest('li')?.querySelector('button')?.textContent;
+        if (chosenLanguage === 'pl' || chosenLanguage === 'en') updateLang(chosenLanguage);
+        navDispatch({ type: 'LANG_LIST_TOGGLE' });
+    };
 
     return (
         <motion.ul
@@ -36,7 +45,7 @@ export const NavLangList = ({ isLangListActive }: Props) => {
             className={`w-max absolute flex flex-col -bottom-1 left-0 text-center origin-top border border-[#313131] rounded-sm ${
                 isLangListActive && 'scale-y-0'
             }`}
-            onClick={updateLang}
+            onClick={changeLanguageHandler}
         >
             {APP_LANGUAGES.map(props => (
                 <NavLangListItem key={props.langName} {...props} />
